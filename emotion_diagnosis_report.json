@@ -1,0 +1,647 @@
+{
+  "raw_logits_issue": false,
+  "label_mapping_issue": false,
+  "normalization_issue": false,
+  "feature_collapse": false,
+  "fusion_bias": false,
+  "class_imbalance": false,
+  "postprocessing_override": true,
+  "root_cause": "Post-processing confidence scaling logic is incorrectly biasing toward 'sad'. The _apply_confidence_scaling method modifies sad confidence based on audio metrics, and the logic appears to be increasing sad scores inappropriately.",
+  "recommended_fix": "Review and fix _apply_confidence_scaling logic in audio_emotion.py. The method should preserve model predictions unless there's strong evidence of misclassification. Consider removing or reducing sad-specific adjustments.",
+  "detailed_findings": {
+    "raw_outputs": [
+      {
+        "logits": [
+          1.6606900691986084,
+          -0.006928473711013794,
+          -3.335786819458008,
+          -0.13124766945838928
+        ],
+        "raw_probabilities": {
+          "neu": 0.7341634631156921,
+          "hap": 0.13853363692760468,
+          "ang": 0.004964211955666542,
+          "sad": 0.12233876436948776
+        },
+        "predicted_index": 0,
+        "predicted_label": "neutral",
+        "confidence": 0.7341634631156921,
+        "canonical_scores": {
+          "neutral": 0.7341634631156921,
+          "happy": 0.13853363692760468,
+          "sad": 0.12233876436948776,
+          "angry": 0.004964211955666542,
+          "fearful": 0.0
+        },
+        "final_label": "neutral",
+        "final_confidence": 0.7341634070487699,
+        "final_scores": {
+          "neutral": 0.7341634070487699,
+          "happy": 0.1385336263480062,
+          "sad": 0.12233875502666652,
+          "angry": 0.004964211576557393,
+          "fearful": 0.0
+        },
+        "audio_metrics": {
+          "rms_db": -18.0,
+          "peak_db": -14.09,
+          "peak_amplitude": 0.1975,
+          "mean_amplitude": 0.113,
+          "spectral_centroid": 898.8,
+          "zero_crossing_rate": 0.0375,
+          "energy_variance": 7.6e-05,
+          "pitch_mean": 312.5,
+          "pitch_variance": 0.0,
+          "raw_rms_db": -9.01,
+          "raw_peak_db": -5.19,
+          "energy_band": "high",
+          "dynamic_range": 3.91,
+          "crest_factor": 1.57,
+          "energy_normalized": true,
+          "energy_level": "loud"
+        }
+      },
+      {
+        "logits": [
+          2.3431506156921387,
+          5.2687788009643555,
+          -3.9950852394104004,
+          -9.304510116577148
+        ],
+        "raw_probabilities": {
+          "neu": 0.05089651420712471,
+          "hap": 0.9490131139755249,
+          "ang": 8.995534881250933e-05,
+          "sad": 4.4480867700258386e-07
+        },
+        "predicted_index": 1,
+        "predicted_label": "happy",
+        "confidence": 0.9490131139755249,
+        "canonical_scores": {
+          "neutral": 0.05089651420712471,
+          "happy": 0.9490131139755249,
+          "sad": 4.4480867700258386e-07,
+          "angry": 8.995534881250933e-05,
+          "fearful": 0.0
+        },
+        "final_label": "happy",
+        "final_confidence": 0.949013087080362,
+        "final_scores": {
+          "neutral": 0.05089651276471046,
+          "happy": 0.949013087080362,
+          "sad": 4.4480866439664445e-07,
+          "angry": 8.99553462631623e-05,
+          "fearful": 0.0
+        },
+        "audio_metrics": {
+          "rms_db": -18.0,
+          "peak_db": -12.19,
+          "peak_amplitude": 0.2458,
+          "mean_amplitude": 0.1096,
+          "spectral_centroid": 994.1,
+          "zero_crossing_rate": 0.0251,
+          "energy_variance": 0.0,
+          "pitch_mean": 187.5,
+          "pitch_variance": 0.0,
+          "raw_rms_db": -5.58,
+          "raw_peak_db": -1.8,
+          "energy_band": "high",
+          "dynamic_range": 5.81,
+          "crest_factor": 1.95,
+          "energy_normalized": true,
+          "energy_level": "loud"
+        }
+      },
+      {
+        "logits": [
+          5.348550319671631,
+          -6.041354656219482,
+          2.936659097671509,
+          -2.084324598312378
+        ],
+        "raw_probabilities": {
+          "neu": 0.9172220826148987,
+          "hap": 1.0372933502367232e-05,
+          "ang": 0.08222492039203644,
+          "sad": 0.0005425228155218065
+        },
+        "predicted_index": 0,
+        "predicted_label": "neutral",
+        "confidence": 0.9172220826148987,
+        "canonical_scores": {
+          "neutral": 0.9172220826148987,
+          "happy": 1.0372933502367232e-05,
+          "sad": 0.0005425228155218065,
+          "angry": 0.08222492039203644,
+          "fearful": 0.0
+        },
+        "final_label": "neutral",
+        "final_confidence": 0.917222175478178,
+        "final_scores": {
+          "neutral": 0.917222175478178,
+          "happy": 1.037293455256504e-05,
+          "sad": 0.000542522870449014,
+          "angry": 0.08222492871682047,
+          "fearful": 0.0
+        },
+        "audio_metrics": {
+          "rms_db": -18.0,
+          "peak_db": -14.45,
+          "peak_amplitude": 0.1895,
+          "mean_amplitude": 0.1133,
+          "spectral_centroid": 956.9,
+          "zero_crossing_rate": 0.0275,
+          "energy_variance": 0.0,
+          "pitch_mean": 218.75,
+          "pitch_variance": 0.0,
+          "raw_rms_db": -10.97,
+          "raw_peak_db": -7.96,
+          "energy_band": "high",
+          "dynamic_range": 3.55,
+          "crest_factor": 1.51,
+          "energy_normalized": true,
+          "energy_level": "loud"
+        }
+      },
+      {
+        "logits": [
+          2.6835134029388428,
+          1.4168106317520142,
+          -0.6138033270835876,
+          -7.016550540924072
+        ],
+        "raw_probabilities": {
+          "neu": 0.7582635283470154,
+          "hap": 0.21364766359329224,
+          "ang": 0.028042301535606384,
+          "sad": 4.6466080675600097e-05
+        },
+        "predicted_index": 0,
+        "predicted_label": "neutral",
+        "confidence": 0.7582635283470154,
+        "canonical_scores": {
+          "neutral": 0.7582635283470154,
+          "happy": 0.21364766359329224,
+          "sad": 4.6466080675600097e-05,
+          "angry": 0.028042301535606384,
+          "fearful": 0.0
+        },
+        "final_label": "neutral",
+        "final_confidence": 0.7582635590137797,
+        "final_scores": {
+          "neutral": 0.7582635590137797,
+          "happy": 0.21364767223393272,
+          "sad": 4.646608255484694e-05,
+          "angry": 0.02804230266973274,
+          "fearful": 0.0
+        },
+        "audio_metrics": {
+          "rms_db": -20.0,
+          "peak_db": -16.34,
+          "peak_amplitude": 0.1523,
+          "mean_amplitude": 0.09,
+          "spectral_centroid": 393.2,
+          "zero_crossing_rate": 0.0188,
+          "energy_variance": 5e-06,
+          "pitch_mean": 150.1,
+          "pitch_variance": 410.47,
+          "raw_rms_db": -16.99,
+          "raw_peak_db": -13.98,
+          "energy_band": "normal",
+          "dynamic_range": 3.66,
+          "crest_factor": 1.52,
+          "energy_normalized": true,
+          "energy_level": "loud"
+        }
+      },
+      {
+        "logits": [
+          2.654935598373413,
+          -2.6422202587127686,
+          1.2533172369003296,
+          -1.7535101175308228
+        ],
+        "raw_probabilities": {
+          "neu": 0.7915286421775818,
+          "hap": 0.0039622425101697445,
+          "ang": 0.1948729306459427,
+          "sad": 0.009636135771870613
+        },
+        "predicted_index": 0,
+        "predicted_label": "neutral",
+        "confidence": 0.7915286421775818,
+        "canonical_scores": {
+          "neutral": 0.7915286421775818,
+          "happy": 0.0039622425101697445,
+          "sad": 0.009636135771870613,
+          "angry": 0.1948729306459427,
+          "fearful": 0.0
+        },
+        "final_label": "neutral",
+        "final_confidence": 0.7915286808789296,
+        "final_scores": {
+          "neutral": 0.7915286808789296,
+          "happy": 0.003962242703901364,
+          "sad": 0.009636136243024052,
+          "angry": 0.19487294017414503,
+          "fearful": 0.0
+        },
+        "audio_metrics": {
+          "rms_db": -18.0,
+          "peak_db": -14.28,
+          "peak_amplitude": 0.1933,
+          "mean_amplitude": 0.1133,
+          "spectral_centroid": 939.8,
+          "zero_crossing_rate": 0.0313,
+          "energy_variance": 0.0,
+          "pitch_mean": 250.0,
+          "pitch_variance": 0.0,
+          "raw_rms_db": -3.93,
+          "raw_peak_db": -0.92,
+          "energy_band": "high",
+          "dynamic_range": 3.72,
+          "crest_factor": 1.54,
+          "energy_normalized": true,
+          "energy_level": "loud"
+        }
+      },
+      {
+        "logits": [
+          5.086893558502197,
+          -3.579730749130249,
+          -1.6207460165023804,
+          -1.5682305097579956
+        ],
+        "raw_probabilities": {
+          "neu": 0.9973258972167969,
+          "hap": 0.00017177901463583112,
+          "ang": 0.0012182773789390922,
+          "sad": 0.001283965539187193
+        },
+        "predicted_index": 0,
+        "predicted_label": "neutral",
+        "confidence": 0.9973258972167969,
+        "canonical_scores": {
+          "neutral": 0.9973258972167969,
+          "happy": 0.00017177901463583112,
+          "sad": 0.001283965539187193,
+          "angry": 0.0012182773789390922,
+          "fearful": 0.0
+        },
+        "final_label": "neutral",
+        "final_confidence": 0.997325977851042,
+        "final_scores": {
+          "neutral": 0.997325977851042,
+          "happy": 0.00017177902852424134,
+          "sad": 0.0012839656429963814,
+          "angry": 0.0012182774774373635,
+          "fearful": 0.0
+        },
+        "audio_metrics": {
+          "rms_db": -22.0,
+          "peak_db": -18.28,
+          "peak_amplitude": 0.122,
+          "mean_amplitude": 0.0715,
+          "spectral_centroid": 939.8,
+          "zero_crossing_rate": 0.0313,
+          "energy_variance": 0.0,
+          "pitch_mean": 250.0,
+          "pitch_variance": 0.0,
+          "raw_rms_db": -29.03,
+          "raw_peak_db": -26.02,
+          "energy_band": "low",
+          "dynamic_range": 3.72,
+          "crest_factor": 1.54,
+          "energy_normalized": true,
+          "energy_level": "loud"
+        }
+      },
+      {
+        "logits": [
+          -0.5203858613967896,
+          3.542440414428711,
+          -7.844234943389893,
+          2.152712821960449
+        ],
+        "raw_probabilities": {
+          "neu": 0.013582559302449226,
+          "hap": 0.789668083190918,
+          "ang": 8.959309525380377e-06,
+          "sad": 0.19674040377140045
+        },
+        "predicted_index": 1,
+        "predicted_label": "happy",
+        "confidence": 0.789668083190918,
+        "canonical_scores": {
+          "neutral": 0.013582559302449226,
+          "happy": 0.789668083190918,
+          "sad": 0.19674040377140045,
+          "angry": 8.959309525380377e-06,
+          "fearful": 0.0
+        },
+        "final_label": "happy",
+        "final_confidence": 0.7896680787890767,
+        "final_scores": {
+          "neutral": 0.013582559226736061,
+          "happy": 0.7896680787890767,
+          "sad": 0.1967404026747118,
+          "angry": 8.95930947543856e-06,
+          "fearful": 0.0
+        },
+        "audio_metrics": {
+          "rms_db": -18.0,
+          "peak_db": -14.28,
+          "peak_amplitude": 0.1931,
+          "mean_amplitude": 0.1133,
+          "spectral_centroid": 1240.1,
+          "zero_crossing_rate": 0.1001,
+          "energy_variance": 0.0,
+          "pitch_mean": 0.0,
+          "pitch_variance": 0.0,
+          "raw_rms_db": -10.97,
+          "raw_peak_db": -7.96,
+          "energy_band": "high",
+          "dynamic_range": 3.72,
+          "crest_factor": 1.53,
+          "energy_normalized": true,
+          "energy_level": "loud"
+        }
+      },
+      {
+        "logits": [
+          -4.734780788421631,
+          -0.22703306376934052,
+          8.147453308105469,
+          -1.211161494255066
+        ],
+        "raw_probabilities": {
+          "neu": 2.5420140445930883e-06,
+          "hap": 0.0002306047681486234,
+          "ang": 0.999680757522583,
+          "sad": 8.619191066827625e-05
+        },
+        "predicted_index": 2,
+        "predicted_label": "angry",
+        "confidence": 0.999680757522583,
+        "canonical_scores": {
+          "neutral": 2.5420140445930883e-06,
+          "happy": 0.0002306047681486234,
+          "sad": 8.619191066827625e-05,
+          "angry": 0.999680757522583,
+          "fearful": 0.0
+        },
+        "final_label": "angry",
+        "final_confidence": 0.9996806613378638,
+        "final_scores": {
+          "neutral": 2.5420138000121008e-06,
+          "happy": 0.00023060474596088527,
+          "sad": 8.619190237528405e-05,
+          "angry": 0.9996806613378638,
+          "fearful": 0.0
+        },
+        "audio_metrics": {
+          "rms_db": -18.0,
+          "peak_db": -14.88,
+          "peak_amplitude": 0.1803,
+          "mean_amplitude": 0.1133,
+          "spectral_centroid": 1131.6,
+          "zero_crossing_rate": 0.0125,
+          "energy_variance": 1e-06,
+          "pitch_mean": 93.75,
+          "pitch_variance": 0.0,
+          "raw_rms_db": -10.97,
+          "raw_peak_db": -7.96,
+          "energy_band": "high",
+          "dynamic_range": 3.12,
+          "crest_factor": 1.43,
+          "energy_normalized": true,
+          "energy_level": "loud"
+        }
+      },
+      {
+        "logits": [
+          -2.4902327060699463,
+          0.5329920649528503,
+          7.914294242858887,
+          -5.726857662200928
+        ],
+        "raw_probabilities": {
+          "neu": 3.0275228709797375e-05,
+          "hap": 0.0006223820964805782,
+          "ang": 0.9993461966514587,
+          "sad": 1.1897046761077945e-06
+        },
+        "predicted_index": 2,
+        "predicted_label": "angry",
+        "confidence": 0.9993461966514587,
+        "canonical_scores": {
+          "neutral": 3.0275228709797375e-05,
+          "happy": 0.0006223820964805782,
+          "sad": 1.1897046761077945e-06,
+          "angry": 0.9993461966514587,
+          "fearful": 0.0
+        },
+        "final_label": "angry",
+        "final_confidence": 0.9993461529986944,
+        "final_scores": {
+          "neutral": 3.027522738733532e-05,
+          "happy": 0.0006223820692941046,
+          "sad": 1.18970462413992e-06,
+          "angry": 0.9993461529986944,
+          "fearful": 0.0
+        },
+        "audio_metrics": {
+          "rms_db": -18.0,
+          "peak_db": -9.04,
+          "peak_amplitude": 0.3533,
+          "mean_amplitude": 0.1081,
+          "spectral_centroid": 3917.4,
+          "zero_crossing_rate": 0.1321,
+          "energy_variance": 6e-06,
+          "pitch_mean": 187.5,
+          "pitch_variance": 0.0,
+          "raw_rms_db": -12.56,
+          "raw_peak_db": -3.67,
+          "energy_band": "high",
+          "dynamic_range": 8.96,
+          "crest_factor": 2.81,
+          "energy_normalized": true,
+          "energy_level": "loud"
+        }
+      },
+      {
+        "logits": [
+          4.368662357330322,
+          -2.5238518714904785,
+          4.242329120635986,
+          -7.851959705352783
+        ],
+        "raw_probabilities": {
+          "neu": 0.5312532782554626,
+          "hap": 0.0005394121399149299,
+          "ang": 0.4682047367095947,
+          "sad": 2.6178990992775653e-06
+        },
+        "predicted_index": 0,
+        "predicted_label": "neutral",
+        "confidence": 0.5312532782554626,
+        "canonical_scores": {
+          "neutral": 0.5312532782554626,
+          "happy": 0.0005394121399149299,
+          "sad": 2.6178990992775653e-06,
+          "angry": 0.4682047367095947,
+          "fearful": 0.0
+        },
+        "final_label": "neutral",
+        "final_confidence": 0.5312532543469032,
+        "final_scores": {
+          "neutral": 0.5312532543469032,
+          "happy": 0.0005394121156391884,
+          "sad": 2.617898981461452e-06,
+          "angry": 0.4682047156384762,
+          "fearful": 0.0
+        },
+        "audio_metrics": {
+          "rms_db": -18.0,
+          "peak_db": -14.61,
+          "peak_amplitude": 0.1861,
+          "mean_amplitude": 0.1133,
+          "spectral_centroid": 973.6,
+          "zero_crossing_rate": 0.025,
+          "energy_variance": 0.0,
+          "pitch_mean": 187.5,
+          "pitch_variance": 0.0,
+          "raw_rms_db": -13.47,
+          "raw_peak_db": -10.46,
+          "energy_band": "high",
+          "dynamic_range": 3.39,
+          "crest_factor": 1.48,
+          "energy_normalized": true,
+          "energy_level": "loud"
+        }
+      }
+    ],
+    "label_mapping": {
+      "id2label": {
+        "0": "neu",
+        "1": "hap",
+        "2": "ang",
+        "3": "sad"
+      },
+      "label2emotion": {
+        "neu": "neutral",
+        "hap": "happy",
+        "ang": "angry",
+        "sad": "sad"
+      }
+    },
+    "normalization": [
+      {
+        "desc": "Original",
+        "rms_before": "-9.00951",
+        "rms_after": "-18.0",
+        "predicted": "neutral",
+        "final": "neutral"
+      },
+      {
+        "desc": "10x quieter",
+        "rms_before": "-29.009512",
+        "rms_after": "-22.0",
+        "predicted": "neutral",
+        "final": "neutral"
+      },
+      {
+        "desc": "100x quieter",
+        "rms_before": "-49.00951",
+        "rms_after": "-43.033485",
+        "predicted": "sad",
+        "final": "sad"
+      },
+      {
+        "desc": "10x louder",
+        "rms_before": "-0.38921848",
+        "rms_after": "-18.0",
+        "predicted": "happy",
+        "final": "happy"
+      },
+      {
+        "desc": "Half amplitude",
+        "rms_before": "-15.030109",
+        "rms_after": "-20.0",
+        "predicted": "neutral",
+        "final": "neutral"
+      }
+    ],
+    "feature_analysis": {
+      "embeddings_computed": 5
+    },
+    "model_config": {
+      "training_mode": false,
+      "device": "cpu",
+      "num_labels": 4
+    },
+    "class_weights": {
+      "biases": {
+        "neutral": -0.03919288516044617,
+        "happy": -0.04138918220996857,
+        "angry": -0.03846138343214989,
+        "sad": -0.01952204294502735
+      },
+      "weight_shapes": "(4, 256)"
+    },
+    "postprocessing_checks": [
+      "override",
+      "sad confidence scaling"
+    ],
+    "controlled_tests": [
+      {
+        "desc": "High pitch + high energy (should be happy)",
+        "predicted": "happy",
+        "confidence": 0.9563648101163653,
+        "scores": {
+          "neutral": 0.0007321724674803445,
+          "happy": 0.9563648101163653,
+          "sad": 0.042899613373240345,
+          "angry": 3.4040429139738317e-06,
+          "fearful": 0.0
+        }
+      },
+      {
+        "desc": "High energy + harsh tone (should be angry)",
+        "predicted": "neutral",
+        "confidence": 0.7169497545914557,
+        "scores": {
+          "neutral": 0.7169497545914557,
+          "happy": 0.21295372953973188,
+          "sad": 0.06983767388269727,
+          "angry": 0.0002588419861151743,
+          "fearful": 0.0
+        }
+      },
+      {
+        "desc": "Flat tone (should be neutral)",
+        "predicted": "neutral",
+        "confidence": 0.5312532543469032,
+        "scores": {
+          "neutral": 0.5312532543469032,
+          "happy": 0.0005394121156391884,
+          "sad": 2.617898981461452e-06,
+          "angry": 0.4682047156384762,
+          "fearful": 0.0
+        }
+      },
+      {
+        "desc": "Low energy + low pitch (should be sad)",
+        "predicted": "angry",
+        "confidence": 0.3941428959837964,
+        "scores": {
+          "neutral": 0.3681164662669488,
+          "happy": 0.23769773852892767,
+          "sad": 4.289922032706479e-05,
+          "angry": 0.3941428959837964,
+          "fearful": 0.0
+        }
+      }
+    ]
+  }
+}

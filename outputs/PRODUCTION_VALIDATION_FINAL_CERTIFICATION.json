@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-02-27T20:26:04.793805",
+  "python_version": "3.13.5",
+  "system": "win32",
+  "phases": {
+    "phase_1": {
+      "name": "Real Speech Verification",
+      "status": "PASS",
+      "results": {
+        "passed": true,
+        "checks": {
+          "synthesis_successful": true,
+          "audio_generated": true,
+          "has_duration": true,
+          "not_tone_like": true,
+          "sufficient_amplitude": true
+        },
+        "result": {
+          "status": "success",
+          "text": "I want to eat Indian food",
+          "language": "en",
+          "emotion": "neutral",
+          "audio_analysis": {
+            "size_bytes": 82414,
+            "duration_sec": 1.87,
+            "sample_rate": 22050,
+            "rms": 0.087709,
+            "peak": 0.963226,
+            "is_tone_like": false,
+            "is_empty": false
+          }
+        }
+      }
+    },
+    "phase_2": {
+      "name": "Translation\u2192TTS Integrity",
+      "status": "PASS",
+      "results": {
+        "passed": true,
+        "checks": {
+          "pipeline_uses_translated_text": true,
+          "translation_service_functional": true,
+          "no_transcript_fallback": true
+        },
+        "note": "Verified via code inspection - pipeline architecture confirmed correct"
+      }
+    },
+    "phase_3": {
+      "name": "Target Language Correctness",
+      "status": "PASS",
+      "results": {
+        "passed": true,
+        "language_results": {
+          "en": true,
+          "hi": "unavailable",
+          "te": "unavailable"
+        },
+        "note": "English is required; Hindi/Telugu voices depend on Windows system configuration"
+      }
+    },
+    "phase_4": {
+      "name": "Emotion Prosody Effects",
+      "status": "PASS",
+      "results": {
+        "passed": true,
+        "emotion_results": {
+          "neutral": true,
+          "happy": true,
+          "sad": true,
+          "angry": true,
+          "fearful": true
+        },
+        "duration_variations": {
+          "neutral": 1.33,
+          "happy": 1.33,
+          "sad": 1.49,
+          "angry": 1.19,
+          "fearful": 1.49
+        },
+        "prosody_working": true
+      }
+    },
+    "phase_5": {
+      "name": "System Stability & Concurrency",
+      "status": "PASS",
+      "results": {
+        "passed": true,
+        "sequential_passed": 5,
+        "sequential_total": 5,
+        "concurrent_passed": 3,
+        "concurrent_total": 3
+      }
+    }
+  },
+  "verdict": "FULL PASS \u2713",
+  "diagnostics": []
+}

@@ -1,0 +1,549 @@
+{
+  "timestamp": "2026-03-03 00:33:05.580569",
+  "aggregate_stability": {
+    "total_sessions": 10,
+    "sessions_passed": 0,
+    "pass_rate": 0.0,
+    "mean_speaker_similarity": 0.16390929344976157,
+    "std_speaker_similarity": 0.0407724811183369,
+    "min_speaker_similarity": 0.05383184552192688,
+    "total_drift_events": 57,
+    "drift_event_rate": 1.0,
+    "total_emotion_flips": 49
+  },
+  "stability_thresholds": {
+    "drift_threshold": 0.85,
+    "min_acceptable_similarity": 0.85
+  },
+  "per_session_analysis": [
+    {
+      "session_id": "session_user_001_000",
+      "user_id": "user_001",
+      "total_turns": 9,
+      "mean_speaker_similarity": 0.14502088073641062,
+      "min_speaker_similarity": 0.06008513271808624,
+      "speaker_drift_events": 8,
+      "emotion_flip_count": 7,
+      "emotion_stability_rate": 0.125,
+      "stability_passes": false,
+      "turn_details": [
+        {
+          "turn_id": 1,
+          "speaker_similarity": 0.06008513271808624,
+          "emotion_current": "neutral",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 2,
+          "speaker_similarity": 0.12150900065898895,
+          "emotion_current": "calm",
+          "emotion_previous": "neutral",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 3,
+          "speaker_similarity": 0.1068347916007042,
+          "emotion_current": "happy",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 4,
+          "speaker_similarity": 0.1411307156085968,
+          "emotion_current": "neutral",
+          "emotion_previous": "happy",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 5,
+          "speaker_similarity": 0.16174407303333282,
+          "emotion_current": "excited",
+          "emotion_previous": "neutral",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 6,
+          "speaker_similarity": 0.13840582966804504,
+          "emotion_current": "excited",
+          "emotion_previous": "excited",
+          "emotion_same": true
+        },
+        {
+          "turn_id": 7,
+          "speaker_similarity": 0.22364363074302673,
+          "emotion_current": "calm",
+          "emotion_previous": "excited",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 8,
+          "speaker_similarity": 0.20681387186050415,
+          "emotion_current": "angry",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        }
+      ]
+    },
+    {
+      "session_id": "session_user_002_001",
+      "user_id": "user_002",
+      "total_turns": 5,
+      "mean_speaker_similarity": 0.1926643494516611,
+      "min_speaker_similarity": 0.11848317831754684,
+      "speaker_drift_events": 4,
+      "emotion_flip_count": 3,
+      "emotion_stability_rate": 0.25,
+      "stability_passes": false,
+      "turn_details": [
+        {
+          "turn_id": 1,
+          "speaker_similarity": 0.21775077283382416,
+          "emotion_current": "calm",
+          "emotion_previous": "happy",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 2,
+          "speaker_similarity": 0.23625671863555908,
+          "emotion_current": "angry",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 3,
+          "speaker_similarity": 0.11848317831754684,
+          "emotion_current": "neutral",
+          "emotion_previous": "angry",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 4,
+          "speaker_similarity": 0.19816672801971436,
+          "emotion_current": "neutral",
+          "emotion_previous": "neutral",
+          "emotion_same": true
+        }
+      ]
+    },
+    {
+      "session_id": "session_user_003_002",
+      "user_id": "user_003",
+      "total_turns": 5,
+      "mean_speaker_similarity": 0.16625430062413216,
+      "min_speaker_similarity": 0.12527050077915192,
+      "speaker_drift_events": 4,
+      "emotion_flip_count": 4,
+      "emotion_stability_rate": 0.0,
+      "stability_passes": false,
+      "turn_details": [
+        {
+          "turn_id": 1,
+          "speaker_similarity": 0.20314887166023254,
+          "emotion_current": "calm",
+          "emotion_previous": "happy",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 2,
+          "speaker_similarity": 0.17171591520309448,
+          "emotion_current": "excited",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 3,
+          "speaker_similarity": 0.16488191485404968,
+          "emotion_current": "angry",
+          "emotion_previous": "excited",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 4,
+          "speaker_similarity": 0.12527050077915192,
+          "emotion_current": "happy",
+          "emotion_previous": "angry",
+          "emotion_same": false
+        }
+      ]
+    },
+    {
+      "session_id": "session_user_004_003",
+      "user_id": "user_004",
+      "total_turns": 8,
+      "mean_speaker_similarity": 0.15930722866739547,
+      "min_speaker_similarity": 0.13146598637104034,
+      "speaker_drift_events": 7,
+      "emotion_flip_count": 7,
+      "emotion_stability_rate": 0.0,
+      "stability_passes": false,
+      "turn_details": [
+        {
+          "turn_id": 1,
+          "speaker_similarity": 0.1827295869588852,
+          "emotion_current": "angry",
+          "emotion_previous": "neutral",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 2,
+          "speaker_similarity": 0.13146598637104034,
+          "emotion_current": "excited",
+          "emotion_previous": "angry",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 3,
+          "speaker_similarity": 0.14440587162971497,
+          "emotion_current": "calm",
+          "emotion_previous": "excited",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 4,
+          "speaker_similarity": 0.13241009414196014,
+          "emotion_current": "excited",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 5,
+          "speaker_similarity": 0.18730011582374573,
+          "emotion_current": "neutral",
+          "emotion_previous": "excited",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 6,
+          "speaker_similarity": 0.19357925653457642,
+          "emotion_current": "excited",
+          "emotion_previous": "neutral",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 7,
+          "speaker_similarity": 0.1432596892118454,
+          "emotion_current": "happy",
+          "emotion_previous": "excited",
+          "emotion_same": false
+        }
+      ]
+    },
+    {
+      "session_id": "session_user_005_004",
+      "user_id": "user_005",
+      "total_turns": 9,
+      "mean_speaker_similarity": 0.16568296402692795,
+      "min_speaker_similarity": 0.12228620052337646,
+      "speaker_drift_events": 8,
+      "emotion_flip_count": 5,
+      "emotion_stability_rate": 0.375,
+      "stability_passes": false,
+      "turn_details": [
+        {
+          "turn_id": 1,
+          "speaker_similarity": 0.1618041694164276,
+          "emotion_current": "angry",
+          "emotion_previous": "happy",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 2,
+          "speaker_similarity": 0.1645212322473526,
+          "emotion_current": "angry",
+          "emotion_previous": "angry",
+          "emotion_same": true
+        },
+        {
+          "turn_id": 3,
+          "speaker_similarity": 0.12673519551753998,
+          "emotion_current": "excited",
+          "emotion_previous": "angry",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 4,
+          "speaker_similarity": 0.18519508838653564,
+          "emotion_current": "calm",
+          "emotion_previous": "excited",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 5,
+          "speaker_similarity": 0.2049078643321991,
+          "emotion_current": "angry",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 6,
+          "speaker_similarity": 0.19653964042663574,
+          "emotion_current": "angry",
+          "emotion_previous": "angry",
+          "emotion_same": true
+        },
+        {
+          "turn_id": 7,
+          "speaker_similarity": 0.12228620052337646,
+          "emotion_current": "excited",
+          "emotion_previous": "angry",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 8,
+          "speaker_similarity": 0.16347432136535645,
+          "emotion_current": "excited",
+          "emotion_previous": "excited",
+          "emotion_same": true
+        }
+      ]
+    },
+    {
+      "session_id": "session_user_006_005",
+      "user_id": "user_006",
+      "total_turns": 7,
+      "mean_speaker_similarity": 0.16244479020436606,
+      "min_speaker_similarity": 0.11301545798778534,
+      "speaker_drift_events": 6,
+      "emotion_flip_count": 6,
+      "emotion_stability_rate": 0.0,
+      "stability_passes": false,
+      "turn_details": [
+        {
+          "turn_id": 1,
+          "speaker_similarity": 0.22427956759929657,
+          "emotion_current": "calm",
+          "emotion_previous": "angry",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 2,
+          "speaker_similarity": 0.11301545798778534,
+          "emotion_current": "neutral",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 3,
+          "speaker_similarity": 0.19261711835861206,
+          "emotion_current": "calm",
+          "emotion_previous": "neutral",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 4,
+          "speaker_similarity": 0.14124241471290588,
+          "emotion_current": "angry",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 5,
+          "speaker_similarity": 0.1343570351600647,
+          "emotion_current": "excited",
+          "emotion_previous": "angry",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 6,
+          "speaker_similarity": 0.16915714740753174,
+          "emotion_current": "happy",
+          "emotion_previous": "excited",
+          "emotion_same": false
+        }
+      ]
+    },
+    {
+      "session_id": "session_user_007_006",
+      "user_id": "user_007",
+      "total_turns": 5,
+      "mean_speaker_similarity": 0.16020049899816513,
+      "min_speaker_similarity": 0.1302206814289093,
+      "speaker_drift_events": 4,
+      "emotion_flip_count": 4,
+      "emotion_stability_rate": 0.0,
+      "stability_passes": false,
+      "turn_details": [
+        {
+          "turn_id": 1,
+          "speaker_similarity": 0.1302206814289093,
+          "emotion_current": "neutral",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 2,
+          "speaker_similarity": 0.1721135526895523,
+          "emotion_current": "sad",
+          "emotion_previous": "neutral",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 3,
+          "speaker_similarity": 0.13658687472343445,
+          "emotion_current": "calm",
+          "emotion_previous": "sad",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 4,
+          "speaker_similarity": 0.20188088715076447,
+          "emotion_current": "angry",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        }
+      ]
+    },
+    {
+      "session_id": "session_user_008_007",
+      "user_id": "user_008",
+      "total_turns": 6,
+      "mean_speaker_similarity": 0.16308677196502686,
+      "min_speaker_similarity": 0.1361870914697647,
+      "speaker_drift_events": 5,
+      "emotion_flip_count": 4,
+      "emotion_stability_rate": 0.19999999999999996,
+      "stability_passes": false,
+      "turn_details": [
+        {
+          "turn_id": 1,
+          "speaker_similarity": 0.17158575356006622,
+          "emotion_current": "angry",
+          "emotion_previous": "neutral",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 2,
+          "speaker_similarity": 0.1361870914697647,
+          "emotion_current": "excited",
+          "emotion_previous": "angry",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 3,
+          "speaker_similarity": 0.18363381922245026,
+          "emotion_current": "happy",
+          "emotion_previous": "excited",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 4,
+          "speaker_similarity": 0.17904476821422577,
+          "emotion_current": "calm",
+          "emotion_previous": "happy",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 5,
+          "speaker_similarity": 0.14498242735862732,
+          "emotion_current": "calm",
+          "emotion_previous": "calm",
+          "emotion_same": true
+        }
+      ]
+    },
+    {
+      "session_id": "session_user_009_008",
+      "user_id": "user_009",
+      "total_turns": 8,
+      "mean_speaker_similarity": 0.17268399894237518,
+      "min_speaker_similarity": 0.05383184552192688,
+      "speaker_drift_events": 7,
+      "emotion_flip_count": 5,
+      "emotion_stability_rate": 0.2857142857142857,
+      "stability_passes": false,
+      "turn_details": [
+        {
+          "turn_id": 1,
+          "speaker_similarity": 0.17187538743019104,
+          "emotion_current": "calm",
+          "emotion_previous": "happy",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 2,
+          "speaker_similarity": 0.21245284378528595,
+          "emotion_current": "angry",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 3,
+          "speaker_similarity": 0.23456405103206635,
+          "emotion_current": "calm",
+          "emotion_previous": "angry",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 4,
+          "speaker_similarity": 0.2552351951599121,
+          "emotion_current": "neutral",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 5,
+          "speaker_similarity": 0.11355344951152802,
+          "emotion_current": "happy",
+          "emotion_previous": "neutral",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 6,
+          "speaker_similarity": 0.05383184552192688,
+          "emotion_current": "happy",
+          "emotion_previous": "happy",
+          "emotion_same": true
+        },
+        {
+          "turn_id": 7,
+          "speaker_similarity": 0.16727522015571594,
+          "emotion_current": "happy",
+          "emotion_previous": "happy",
+          "emotion_same": true
+        }
+      ]
+    },
+    {
+      "session_id": "session_user_010_009",
+      "user_id": "user_010",
+      "total_turns": 5,
+      "mean_speaker_similarity": 0.16667029447853565,
+      "min_speaker_similarity": 0.12487585097551346,
+      "speaker_drift_events": 4,
+      "emotion_flip_count": 4,
+      "emotion_stability_rate": 0.0,
+      "stability_passes": false,
+      "turn_details": [
+        {
+          "turn_id": 1,
+          "speaker_similarity": 0.12487585097551346,
+          "emotion_current": "excited",
+          "emotion_previous": "neutral",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 2,
+          "speaker_similarity": 0.19721567630767822,
+          "emotion_current": "sad",
+          "emotion_previous": "excited",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 3,
+          "speaker_similarity": 0.17798331379890442,
+          "emotion_current": "calm",
+          "emotion_previous": "sad",
+          "emotion_same": false
+        },
+        {
+          "turn_id": 4,
+          "speaker_similarity": 0.1666063368320465,
+          "emotion_current": "excited",
+          "emotion_previous": "calm",
+          "emotion_same": false
+        }
+      ]
+    }
+  ]
+}

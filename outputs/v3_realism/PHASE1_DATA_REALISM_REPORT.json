@@ -1,0 +1,68 @@
+{
+  "total_samples": 5,
+  "valid_samples": 5,
+  "failed_samples": 0,
+  "pass_rate": 1.0,
+  "samples": [
+    {
+      "file": "synthetic_00.wav",
+      "duration_s": 3.9871875,
+      "rms_band": "normal",
+      "rms_dbfs": -19.98495064016078,
+      "status": "PASS",
+      "quality": {
+        "is_valid": true,
+        "speech_ratio": 0.8585372573160894
+      }
+    },
+    {
+      "file": "synthetic_01.wav",
+      "duration_s": 5.9275625,
+      "rms_band": "normal",
+      "rms_dbfs": -20.011208055057477,
+      "status": "PASS",
+      "quality": {
+        "is_valid": true,
+        "speech_ratio": 0.9126842936227102
+      }
+    },
+    {
+      "file": "synthetic_02.wav",
+      "duration_s": 3.8966875,
+      "rms_band": "normal",
+      "rms_dbfs": -20.005901610731144,
+      "status": "PASS",
+      "quality": {
+        "is_valid": true,
+        "speech_ratio": 0.8935415309476519
+      }
+    },
+    {
+      "file": "synthetic_03.wav",
+      "duration_s": 3.67425,
+      "rms_band": "normal",
+      "rms_dbfs": -20.016225712360587,
+      "status": "PASS",
+      "quality": {
+        "is_valid": true,
+        "speech_ratio": 0.8550852388833546
+      }
+    },
+    {
+      "file": "synthetic_04.wav",
+      "duration_s": 3.3634375,
+      "rms_band": "normal",
+      "rms_dbfs": -20.003818153911542,
+      "status": "PASS",
+      "quality": {
+        "is_valid": true,
+        "speech_ratio": 0.9403932409295395
+      }
+    }
+  ],
+  "summary": {
+    "mean_final_duration_s": 4.5,
+    "mean_rms_dbfs": -20.0,
+    "mean_speech_ratio": 0.9
+  }
+}

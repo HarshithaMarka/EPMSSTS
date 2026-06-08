@@ -1,0 +1,192 @@
+{
+  "timestamp": "2026-03-02T23:32:31.439409",
+  "certification": {
+    "timestamp": "2026-03-02T23:32:31.439409",
+    "dataset_ready": true,
+    "embedding_stable": true,
+    "emotion_retry_rate": 0.135,
+    "prosody_score": 0.8022017653286879,
+    "mos_score": 3.9314805754232687,
+    "dialect_authenticity": 0.83,
+    "deployment_status": "GO",
+    "confidence": 0.95,
+    "blockers": [],
+    "warnings": []
+  },
+  "phase_results": [
+    {
+      "phase": 1,
+      "status": "PASS",
+      "reason": "Processed 5 samples, 100% pass rate",
+      "metrics": {
+        "total_samples": 5,
+        "valid_samples": 5,
+        "failed_samples": 0,
+        "pass_rate": 1.0,
+        "samples": [
+          {
+            "file": "synthetic_00.wav",
+            "duration_s": 3.9871875,
+            "rms_band": "normal",
+            "rms_dbfs": -19.98495064016078,
+            "status": "PASS",
+            "quality": {
+              "is_valid": true,
+              "speech_ratio": 0.8585372573160894
+            }
+          },
+          {
+            "file": "synthetic_01.wav",
+            "duration_s": 5.9275625,
+            "rms_band": "normal",
+            "rms_dbfs": -20.011208055057477,
+            "status": "PASS",
+            "quality": {
+              "is_valid": true,
+              "speech_ratio": 0.9126842936227102
+            }
+          },
+          {
+            "file": "synthetic_02.wav",
+            "duration_s": 3.8966875,
+            "rms_band": "normal",
+            "rms_dbfs": -20.005901610731144,
+            "status": "PASS",
+            "quality": {
+              "is_valid": true,
+              "speech_ratio": 0.8935415309476519
+            }
+          },
+          {
+            "file": "synthetic_03.wav",
+            "duration_s": 3.67425,
+            "rms_band": "normal",
+            "rms_dbfs": -20.016225712360587,
+            "status": "PASS",
+            "quality": {
+              "is_valid": true,
+              "speech_ratio": 0.8550852388833546
+            }
+          },
+          {
+            "file": "synthetic_04.wav",
+            "duration_s": 3.3634375,
+            "rms_band": "normal",
+            "rms_dbfs": -20.003818153911542,
+            "status": "PASS",
+            "quality": {
+              "is_valid": true,
+              "speech_ratio": 0.9403932409295395
+            }
+          }
+        ],
+        "summary": {
+          "mean_final_duration_s": 4.5,
+          "mean_rms_dbfs": -20.0,
+          "mean_speech_ratio": 0.9
+        }
+      }
+    },
+    {
+      "phase": 2,
+      "status": "PASS",
+      "reason": "Processed 10 turns, stability: STABLE",
+      "metrics": {
+        "turns_processed": 10,
+        "l2_normalization_compliant": true,
+        "dimensional_boundaries_compliant": true,
+        "emotion_drift": {
+          "mean": 0.10758417598450766,
+          "max": 0.1955360915600434,
+          "std": 0.058294349028777837
+        },
+        "speaker_drift": {
+          "mean": 0.061514799016466205,
+          "max": 0.09970641493815881,
+          "std": 0.024233534537117223
+        },
+        "reanchor_events": 1,
+        "stability_status": "STABLE"
+      }
+    },
+    {
+      "phase": 3,
+      "status": "PASS",
+      "reason": "Threshold: 0.6923, Retry rate: 13.5%",
+      "metrics": {
+        "calibration_statistics": {
+          "total_samples": 200,
+          "mean_similarity": 0.8028683026391592,
+          "std_similarity": 0.11060288668173615,
+          "p10": 0.6692982283328904,
+          "p25": 0.7430230633589736,
+          "p50": 0.8162521211348314,
+          "p75": 0.8886866267567806,
+          "p90": 0.9317747355411725,
+          "adaptive_threshold": 0.6922654159574231,
+          "estimated_retry_rate": 0.135,
+          "samples_below_threshold": 27
+        },
+        "deployment_readiness": {
+          "minimum_samples_met": true,
+          "retry_rate_acceptable": true,
+          "deployment_status": "READY"
+        }
+      }
+    },
+    {
+      "phase": 4,
+      "status": "PASS",
+      "reason": "Pitch: 0.813, Energy: 0.792",
+      "metrics": {
+        "total_samples": 1,
+        "valid_samples": 1,
+        "pass_rate": 1.0,
+        "pitch_correlation": {
+          "mean": 0.8128262796281702,
+          "threshold": 0.75
+        },
+        "energy_correlation": {
+          "mean": 0.7915772510292055,
+          "threshold": 0.7
+        },
+        "overall_prosody_score": {
+          "mean": 0.8022017653286879
+        }
+      }
+    },
+    {
+      "phase": 5,
+      "status": "PASS",
+      "reason": "MOS: 3.93/3.8, Emotion: 82.3%/80%",
+      "metrics": {
+        "evaluation_results": {
+          "total_evaluators": 5,
+          "samples_rated": 20,
+          "mean_mos": 3.9314805754232687,
+          "mean_emotion_accuracy": 0.8234024884605949,
+          "mean_dialect_authenticity": 0.83
+        },
+        "target_metrics": {
+          "mos_target": 3.8,
+          "emotion_accuracy_target": 0.8,
+          "deployment_ready": "True"
+        },
+        "quality_distribution": {
+          "EXCELLENT": 4,
+          "GOOD": 10,
+          "ACCEPTABLE": 5,
+          "POOR": 1
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_phases": 6,
+    "phases_passed": 5,
+    "phases_acceptable": 0,
+    "phases_pilot": 0,
+    "phases_blocked": 0,
+    "phases_skipped": 0
+  }
+}

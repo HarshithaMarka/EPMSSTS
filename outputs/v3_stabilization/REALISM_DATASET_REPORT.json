@@ -1,0 +1,29 @@
+{
+  "total_samples": 10,
+  "emotion_samples": {
+    "sad": 0,
+    "happy": 0,
+    "angry": 0,
+    "neutral": 0
+  },
+  "dialect_samples": {
+    "andhra": 0,
+    "telangana": 0
+  },
+  "mean_duration": 0.0,
+  "mean_rms": 0.0,
+  "mean_silence_ratio": 0.0,
+  "dataset_ready": false,
+  "failed_samples": [
+    "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS\\data\\sad\\whisper\\sad_whisper_pilot_01.wav",
+    "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS\\data\\sad\\normal\\sad_normal_pilot_01.wav",
+    "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS\\data\\sad\\normal\\sad_normal_pilot_02.wav",
+    "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS\\data\\happy\\normal\\happy_normal_pilot_01.wav",
+    "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS\\data\\happy\\normal\\happy_normal_pilot_02.wav",
+    "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS\\data\\angry\\loud\\angry_loud_pilot_01.wav",
+    "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS\\data\\angry\\normal\\test_happy.wav",
+    "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS\\data\\neutral\\normal\\test_after_fix.wav",
+    "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS\\data\\neutral\\normal\\test_happy.wav",
+    "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS\\data\\neutral\\normal\\test_tts_output.wav"
+  ]
+}

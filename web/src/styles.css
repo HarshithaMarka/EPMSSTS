@@ -1,0 +1,191 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #0b0f19;
+  --bg-soft: #0f1625;
+  --surface: rgba(15, 23, 37, 0.7);
+  --surface-strong: rgba(20, 30, 46, 0.85);
+  --text: #e5e7eb;
+  --muted: rgba(226, 232, 240, 0.6);
+  --accent: #22d3ee;
+  --accent-strong: #0ea5a4;
+  --aura: #f59e0b;
+  --aura-strong: #d97706;
+  --ring: rgba(34, 211, 238, 0.35);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f7f8fb;
+  --bg-soft: #ffffff;
+  --surface: rgba(255, 255, 255, 0.8);
+  --surface-strong: rgba(255, 255, 255, 0.95);
+  --text: #0f172a;
+  --muted: rgba(15, 23, 42, 0.55);
+  --accent: #0ea5a4;
+  --accent-strong: #0f766e;
+  --aura: #f59e0b;
+  --aura-strong: #b45309;
+  --ring: rgba(14, 165, 164, 0.35);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Sora", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.app-shell {
+  background: radial-gradient(1200px 600px at 12% -10%, rgba(34, 211, 238, 0.18), transparent),
+    radial-gradient(900px 500px at 90% 10%, rgba(245, 158, 11, 0.18), transparent),
+    var(--bg);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(600px 300px at 15% 20%, rgba(34, 211, 238, 0.18), transparent),
+    radial-gradient(520px 280px at 80% 30%, rgba(245, 158, 11, 0.2), transparent);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glass {
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.card-surface {
+  background: var(--surface-strong);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 16px;
+}
+
+.gradient-border {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.45), rgba(245, 158, 11, 0.35));
+  padding: 1px;
+  border-radius: 18px;
+}
+
+.badge-soft {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.glow {
+  box-shadow: 0 0 32px rgba(34, 211, 238, 0.2);
+}
+
+.dot-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #22c55e;
+  animation: pulse 2s infinite;
+}
+
+.pulse-ring {
+  animation: ring 2.4s ease-out infinite;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, rgba(34, 211, 238, 0.15), rgba(34, 211, 238, 0.5), rgba(34, 211, 238, 0.15));
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.floaty {
+  animation: float 6s ease-in-out infinite;
+}
+
+.wave-bars {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 6px;
+  align-items: end;
+}
+
+.wave-bars span {
+  width: 6px;
+  background: linear-gradient(180deg, var(--accent), var(--aura));
+  border-radius: 999px;
+  animation: wave 1.4s ease-in-out infinite;
+}
+
+.wave-bars span:nth-child(2) { animation-delay: 0.1s; }
+.wave-bars span:nth-child(3) { animation-delay: 0.2s; }
+.wave-bars span:nth-child(4) { animation-delay: 0.3s; }
+.wave-bars span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.5); opacity: 0.4; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes ring {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  70% { transform: scale(1.4); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes wave {
+  0%, 100% { height: 12px; opacity: 0.6; }
+  50% { height: 28px; opacity: 1; }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.6) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.6);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

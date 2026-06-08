@@ -1,0 +1,12 @@
+{
+  "status": "failed_dataset_validation",
+  "violations": [
+    "Dialect andhra has 0 speakers; minimum required is 10",
+    "Dialect telangana has 0 speakers; minimum required is 10"
+  ],
+  "speaker_counts": {
+    "andhra": 0,
+    "telangana": 0
+  },
+  "min_sentences_per_speaker": {}
+}

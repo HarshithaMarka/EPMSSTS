@@ -1,0 +1,15 @@
+{
+  "train_accuracy": 0.0,
+  "test_accuracy": 0.0,
+  "cross_speaker_accuracy": 0.0,
+  "cross_emotion_accuracy": 0.0,
+  "cross_volume_accuracy": 0.0,
+  "shuffle_accuracy": 0.0,
+  "random_embedding_accuracy": 0.0,
+  "leakage_detected": true,
+  "production_ready": false,
+  "violations": [
+    "Dialect andhra has 0 speakers; minimum required is 10",
+    "Dialect telangana has 0 speakers; minimum required is 10"
+  ]
+}

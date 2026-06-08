@@ -1,0 +1,117 @@
+{
+  "phase1": {
+    "total_tests": 13,
+    "correct_predictions": 6,
+    "over_corrected_to_neutral": 0,
+    "genuine_sad_detected": 0,
+    "genuine_sad_overridden": 0,
+    "per_emotion_accuracy": {
+      "neutral": 0.6666666666666666,
+      "happy": 1.0,
+      "sad": 0.0,
+      "angry": 0.5,
+      "fearful": 0.0
+    }
+  },
+  "phase2": {
+    "tests_by_emotion": {
+      "happy": {
+        "predictions": [
+          "happy",
+          "happy",
+          "happy",
+          "happy"
+        ],
+        "confidences": [
+          0.964865802763803,
+          0.9276115268034485,
+          0.9365324674566312,
+          0.935264900886409
+        ],
+        "consistent": true,
+        "consistency_rate": 1.0
+      },
+      "neutral": {
+        "predictions": [
+          "neutral",
+          "happy",
+          "happy",
+          "angry"
+        ],
+        "confidences": [
+          0.6735252756817042,
+          0.5818354292343599,
+          0.7527310371365655,
+          0.6194473448380146
+        ],
+        "consistent": false,
+        "consistency_rate": 0.25
+      },
+      "angry": {
+        "predictions": [
+          "neutral",
+          "neutral",
+          "happy",
+          "neutral"
+        ],
+        "confidences": [
+          0.7931656591399712,
+          0.747500017351704,
+          0.4637514901335664,
+          0.47691874985517935
+        ],
+        "consistent": false,
+        "consistency_rate": 0.0
+      }
+    },
+    "invariance_score": 0.4166666666666667
+  },
+  "phase3": {
+    "raw_predictions": [
+      "happy",
+      "happy",
+      "happy",
+      "happy",
+      "happy"
+    ],
+    "smoothed_predictions": [
+      "happy",
+      "happy",
+      "happy",
+      "happy",
+      "happy"
+    ],
+    "flip_rate_raw": 0.0,
+    "flip_rate_smoothed": 0.0,
+    "stability_improvement": 0.0
+  },
+  "phase4": {
+    "preservation_rate": 0.0,
+    "avg_consistency": 0.0,
+    "avg_latency_ms": 0.0
+  },
+  "phase5": {
+    "scenarios": [],
+    "avg_latency_ms": 0.0,
+    "naturalness_score": 0.0,
+    "robotic_warnings": 0,
+    "skipped": true
+  },
+  "final_score": {
+    "components": {
+      "emotion_detection": 0.6753205128205129,
+      "tts_preservation": 0.0,
+      "tts_naturalness": 0.0,
+      "latency": 0.0
+    },
+    "weights": {
+      "emotion_detection": 1.0,
+      "tts_preservation": 0.0,
+      "tts_naturalness": 0.0,
+      "latency": 0.0
+    },
+    "final_score": 0.6753205128205129,
+    "grade": "C (Needs Improvement)",
+    "tts_skipped": true
+  }
+}

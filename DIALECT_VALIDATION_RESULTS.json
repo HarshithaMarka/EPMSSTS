@@ -1,0 +1,66 @@
+{
+  "accuracy": 1.0,
+  "confusion_matrix": {
+    "andhra": {
+      "andhra": 3,
+      "telangana": 0
+    },
+    "telangana": {
+      "andhra": 0,
+      "telangana": 3
+    }
+  },
+  "average_confidence": {
+    "andhra": 0.9871926705042521,
+    "telangana": 0.9524769186973572,
+    "overall": 0.9698347946008047
+  },
+  "volume_stable": true,
+  "emotion_independent": true,
+  "dialect_model_working": true,
+  "test_results": [
+    {
+      "file": "andhra_sample_1.wav",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9866520166397095,
+      "acoustic_confidence": 0.9866520166397095
+    },
+    {
+      "file": "andhra_sample_2.wav",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9887456297874451,
+      "acoustic_confidence": 0.9887456297874451
+    },
+    {
+      "file": "andhra_sample_3.wav",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9861803650856018,
+      "acoustic_confidence": 0.9861803650856018
+    },
+    {
+      "file": "telangana_sample_1.wav",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9510934352874756,
+      "acoustic_confidence": 0.9510934352874756
+    },
+    {
+      "file": "telangana_sample_2.wav",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.957696259021759,
+      "acoustic_confidence": 0.957696259021759
+    },
+    {
+      "file": "telangana_sample_3.wav",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9486410617828369,
+      "acoustic_confidence": 0.9486410617828369
+    }
+  ],
+  "failure_reasons": []
+}

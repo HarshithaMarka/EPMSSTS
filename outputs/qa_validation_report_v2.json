@@ -1,0 +1,180 @@
+{
+  "timestamp": 1772195465.48929,
+  "methodology": "Using TTS-generated speech audio for realistic input",
+  "test_cases": [],
+  "audio_validation": {
+    "test_cases": [
+      {
+        "target_lang": "en",
+        "status": "fail",
+        "checks": {
+          "file_exists": true,
+          "not_empty": false,
+          "has_duration": false,
+          "not_silent": false,
+          "waveform_valid": false
+        },
+        "analysis": {
+          "exists": true,
+          "file_size_bytes": 0,
+          "error": "Failed to analyze: Error opening 'C:\\\\vivek\\\\project_final_year\\\\Epmssts\\\\EPMSSTS\\\\outputs\\\\a9730086-8380-4c4c-9104-db60c5a86575.wav': Format not recognised."
+        },
+        "session_id": "a9730086-8380-4c4c-9104-db60c5a86575"
+      },
+      {
+        "target_lang": "te",
+        "status": "fail",
+        "checks": {
+          "file_exists": true,
+          "not_empty": false,
+          "has_duration": false,
+          "not_silent": false,
+          "waveform_valid": false
+        },
+        "analysis": {
+          "exists": true,
+          "file_size_bytes": 0,
+          "error": "Failed to analyze: Error opening 'C:\\\\vivek\\\\project_final_year\\\\Epmssts\\\\EPMSSTS\\\\outputs\\\\bcc180cb-a670-433c-902d-b6de2efe26fb.wav': Format not recognised."
+        },
+        "session_id": "bcc180cb-a670-433c-902d-b6de2efe26fb"
+      },
+      {
+        "target_lang": "hi",
+        "status": "fail",
+        "checks": {
+          "file_exists": true,
+          "not_empty": false,
+          "has_duration": false,
+          "not_silent": false,
+          "waveform_valid": false
+        },
+        "analysis": {
+          "exists": true,
+          "file_size_bytes": 0,
+          "error": "Failed to analyze: Error opening 'C:\\\\vivek\\\\project_final_year\\\\Epmssts\\\\EPMSSTS\\\\outputs\\\\a3cd2cf3-d265-47ed-927c-7e857d7cd5ed.wav': Format not recognised."
+        },
+        "session_id": "a3cd2cf3-d265-47ed-927c-7e857d7cd5ed"
+      }
+    ],
+    "total": 3,
+    "passed": 0
+  },
+  "text_consistency": {
+    "status": "partial",
+    "checks": {
+      "translation_different_from_source": false,
+      "translated_text_not_empty": false,
+      "tts_generated_audio": false
+    },
+    "original_language": "en",
+    "target_language": "te",
+    "translation_verified": false
+  },
+  "language_validation": {
+    "test_cases": [
+      {
+        "target_language": "en",
+        "status": "partial",
+        "checks": {
+          "target_lang_correct": true,
+          "translation_present": false,
+          "audio_generated": true,
+          "audio_valid": false,
+          "script_matches_language": false
+        },
+        "translated_sample": ""
+      },
+      {
+        "target_language": "hi",
+        "status": "partial",
+        "checks": {
+          "target_lang_correct": true,
+          "translation_present": false,
+          "audio_generated": true,
+          "audio_valid": false,
+          "script_matches_language": false
+        },
+        "translated_sample": ""
+      },
+      {
+        "target_language": "te",
+        "status": "partial",
+        "checks": {
+          "target_lang_correct": true,
+          "translation_present": false,
+          "audio_generated": true,
+          "audio_valid": false,
+          "script_matches_language": false
+        },
+        "translated_sample": ""
+      }
+    ],
+    "total": 3,
+    "passed": 0
+  },
+  "emotion_validation": {
+    "test_cases": [
+      {
+        "emotion": "happy",
+        "status": "partial",
+        "detected": "neutral",
+        "confidence": 0.9996774317581489,
+        "checks": {
+          "emotion_detected": true,
+          "confidence_valid": true,
+          "audio_generated": true,
+          "audio_valid": false
+        }
+      },
+      {
+        "emotion": "sad",
+        "status": "partial",
+        "detected": "neutral",
+        "confidence": 0.9999824213918055,
+        "checks": {
+          "emotion_detected": true,
+          "confidence_valid": true,
+          "audio_generated": true,
+          "audio_valid": false
+        }
+      },
+      {
+        "emotion": "neutral",
+        "status": "partial",
+        "detected": "neutral",
+        "confidence": 0.9999969768257513,
+        "checks": {
+          "emotion_detected": true,
+          "confidence_valid": true,
+          "audio_generated": true,
+          "audio_valid": false
+        }
+      }
+    ],
+    "total": 3,
+    "passed": 0
+  },
+  "round_trip_tests": {
+    "test_cases": [
+      {
+        "translation_pair": "English -> Telugu -> English",
+        "status": "fail",
+        "step": "intermediate_audio_generation"
+      },
+      {
+        "translation_pair": "English -> Hindi -> English",
+        "status": "fail",
+        "step": "intermediate_audio_generation"
+      }
+    ],
+    "total": 2,
+    "passed": 0
+  },
+  "summary": {
+    "total_test_cases": 12,
+    "passed_test_cases": 0,
+    "verdict": "FAIL",
+    "timestamp": 1772195492.411915
+  },
+  "issues_found": []
+}

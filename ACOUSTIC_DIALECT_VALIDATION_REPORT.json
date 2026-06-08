@@ -1,0 +1,20 @@
+{
+  "acoustic_accuracy": 1.0,
+  "confusion_matrix": {
+    "andhra": {
+      "andhra": 9,
+      "telangana": 0
+    },
+    "telangana": {
+      "andhra": 0,
+      "telangana": 11
+    }
+  },
+  "volume_stability": true,
+  "emotion_leakage": false,
+  "dialect_model_real": true,
+  "training_samples": 80,
+  "validation_samples": 20,
+  "device": "cpu",
+  "model_path": "models\\dialect_classifier.pth"
+}

@@ -1,0 +1,14 @@
+filename,filepath,predicted,confidence,rms,centroid,pitch_mean,pitch_var,band,volume,emotion_folder,utterance_id,assigned_to,decision
+test_happy.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_converted/test_happy.wav,angry,0.810387,-20.1699,1895.54,219.44,2419.22,normal,normal,unknown,test,,skipped_duplicate
+test_sad.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_converted/test_sad.wav,angry,0.885976,-20.1723,1867.40,223.64,2878.51,normal,normal,unknown,test,,skipped_duplicate
+test_tts_output.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_converted/test_tts_output.wav,angry,0.866889,-20.1699,1895.54,219.44,2419.22,normal,normal,unknown,test_tts_output,,skipped_duplicate
+test_happy_segment_01.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_segmented/test_happy_segment_01.wav,angry,0.565105,-20.1699,1895.54,219.44,2419.22,normal,normal,unknown,test_segment_01,,skipped_duplicate
+test_sad_segment_01.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_segmented/test_sad_segment_01.wav,angry,0.510853,-20.1723,1867.40,223.64,2878.51,normal,normal,unknown,test_segment_01,,skipped_duplicate
+test_sad_segment_02.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_segmented/test_sad_segment_02.wav,angry,0.746426,-20.7727,1937.76,238.45,3873.39,normal,normal,unknown,test_segment_02,,skipped_duplicate
+test_tts_output_segment_01.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_segmented/test_tts_output_segment_01.wav,angry,0.565105,-20.1699,1895.54,219.44,2419.22,normal,normal,unknown,test_tts_output_segment_01,,skipped_duplicate
+test_after_fix.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_after_fix.wav,neutral,0.822673,-23.9676,1898.51,216.56,7979.02,normal,normal,unknown,test_after_fix,,skipped_duplicate
+test_happy.mp3,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_happy.mp3,angry,0.776767,-20.5285,1898.02,218.01,2426.41,normal,normal,unknown,test,,skipped_duplicate
+test_happy.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_happy.wav,neutral,0.849306,-23.4607,2103.87,209.22,6529.87,normal,normal,unknown,test,,skipped_duplicate
+test_sad.mp3,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_sad.mp3,angry,0.863674,-20.5391,1868.70,226.38,3016.85,normal,normal,unknown,test,,skipped_duplicate
+test_tts_output.mp3,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_tts_output.mp3,angry,0.816310,-20.5285,1898.00,218.01,2426.41,normal,normal,unknown,test_tts_output,,skipped_duplicate
+test_tts_output.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_tts_output.wav,neutral,0.940874,-16.9930,359.36,250.00,0.00,normal,normal,unknown,test_tts_output,,skipped_duplicate

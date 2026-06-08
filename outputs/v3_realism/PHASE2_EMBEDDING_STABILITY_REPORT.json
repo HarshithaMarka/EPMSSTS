@@ -1,0 +1,17 @@
+{
+  "turns_processed": 10,
+  "l2_normalization_compliant": true,
+  "dimensional_boundaries_compliant": true,
+  "emotion_drift": {
+    "mean": 0.10758417598450766,
+    "max": 0.1955360915600434,
+    "std": 0.058294349028777837
+  },
+  "speaker_drift": {
+    "mean": 0.061514799016466205,
+    "max": 0.09970641493815881,
+    "std": 0.024233534537117223
+  },
+  "reanchor_events": 1,
+  "stability_status": "STABLE"
+}

@@ -1,0 +1,120 @@
+{
+  "timestamp": "2026-03-03 00:32:56.150568",
+  "source_reports": {
+    "pilot_report": "REAL_WORLD_PILOT_REPORT.json",
+    "usage_log": "PILOT_USAGE_LOG.json",
+    "edge_case_report": "EDGE_CASE_REPORT.json"
+  },
+  "pilot_failure_rate": 0.05263157894736842,
+  "total_failures_extracted": 6,
+  "failure_events": [
+    {
+      "event_id": "interaction_user_004_0028",
+      "source_report": "PILOT_USAGE_LOG.json",
+      "stage": "runtime_inference",
+      "exception_type": "UnknownRuntimeException",
+      "timeout_or_crash": "crash",
+      "memory_spike": false,
+      "circuit_breaker_activation": false,
+      "retry_exhausted": false,
+      "silence_misclassification": false,
+      "async_cancellation": false,
+      "processing_time_ms": 735.0,
+      "category": "Model inference exception",
+      "reproducibility_signature": "usage::user_004::Model inference exception"
+    },
+    {
+      "event_id": "interaction_user_008_0054",
+      "source_report": "PILOT_USAGE_LOG.json",
+      "stage": "runtime_inference",
+      "exception_type": "UnknownRuntimeException",
+      "timeout_or_crash": "crash",
+      "memory_spike": false,
+      "circuit_breaker_activation": false,
+      "retry_exhausted": true,
+      "silence_misclassification": false,
+      "async_cancellation": false,
+      "processing_time_ms": 336.0,
+      "category": "Orchestrator mis-synchronization",
+      "reproducibility_signature": "usage::user_008::Orchestrator mis-synchronization"
+    },
+    {
+      "event_id": "interaction_user_009_0063",
+      "source_report": "PILOT_USAGE_LOG.json",
+      "stage": "runtime_inference",
+      "exception_type": "UnknownRuntimeException",
+      "timeout_or_crash": "crash",
+      "memory_spike": false,
+      "circuit_breaker_activation": false,
+      "retry_exhausted": false,
+      "silence_misclassification": false,
+      "async_cancellation": false,
+      "processing_time_ms": 224.0,
+      "category": "Model inference exception",
+      "reproducibility_signature": "usage::user_009::Model inference exception"
+    },
+    {
+      "event_id": "interaction_user_009_0066",
+      "source_report": "PILOT_USAGE_LOG.json",
+      "stage": "runtime_inference",
+      "exception_type": "UnknownRuntimeException",
+      "timeout_or_crash": "crash",
+      "memory_spike": false,
+      "circuit_breaker_activation": false,
+      "retry_exhausted": false,
+      "silence_misclassification": false,
+      "async_cancellation": false,
+      "processing_time_ms": 207.0,
+      "category": "Model inference exception",
+      "reproducibility_signature": "usage::user_009::Model inference exception"
+    },
+    {
+      "event_id": "edge_emotional_whisper_007",
+      "source_report": "EDGE_CASE_REPORT.json",
+      "stage": "edge_case_emotional_whisper",
+      "exception_type": "EdgeCaseProcessingException",
+      "timeout_or_crash": "crash",
+      "memory_spike": false,
+      "circuit_breaker_activation": false,
+      "retry_exhausted": false,
+      "silence_misclassification": true,
+      "async_cancellation": false,
+      "processing_time_ms": 418.0,
+      "category": "Unhandled edge input",
+      "reproducibility_signature": "edge::emotional_whisper::Unhandled edge input"
+    },
+    {
+      "event_id": "edge_emotional_whisper_015",
+      "source_report": "EDGE_CASE_REPORT.json",
+      "stage": "edge_case_emotional_whisper",
+      "exception_type": "EdgeCaseProcessingException",
+      "timeout_or_crash": "crash",
+      "memory_spike": false,
+      "circuit_breaker_activation": false,
+      "retry_exhausted": false,
+      "silence_misclassification": true,
+      "async_cancellation": false,
+      "processing_time_ms": 745.0,
+      "category": "Unhandled edge input",
+      "reproducibility_signature": "edge::emotional_whisper::Unhandled edge input"
+    }
+  ],
+  "phase_2_categorization": {
+    "category_percentages": {
+      "Timeout breach": 0.0,
+      "Memory exhaustion": 0.0,
+      "Race condition": 0.0,
+      "Model inference exception": 50.0,
+      "Audio preprocessing crash": 0.0,
+      "Orchestrator mis-synchronization": 16.666666666666664,
+      "Circuit breaker false positive": 0.0,
+      "Unhandled edge input": 33.33333333333333
+    },
+    "mean_latency_before_crash_ms": 444.1666666666667,
+    "reproducibility_rate": 0.6666666666666666
+  },
+  "notes": [
+    "Current pilot reports do not include typed exception metadata; classification uses deterministic heuristics from available fields.",
+    "Instrumentation patch adds explicit per-failure metadata for future runs."
+  ]
+}

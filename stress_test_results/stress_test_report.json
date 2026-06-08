@@ -1,0 +1,875 @@
+{
+  "accuracy": 1.0,
+  "precision_per_dialect": {
+    "andhra": 1.0,
+    "telangana": 1.0
+  },
+  "recall_per_dialect": {
+    "andhra": 1.0,
+    "telangana": 1.0
+  },
+  "f1_per_dialect": {
+    "andhra": 1.0,
+    "telangana": 1.0
+  },
+  "confusion_matrix": {
+    "andhra": {
+      "andhra": 50,
+      "telangana": 0
+    },
+    "telangana": {
+      "andhra": 0,
+      "telangana": 50
+    }
+  },
+  "roc_auc": 1.0,
+  "avg_precision_score": 1.0,
+  "robustness_tests": [
+    {
+      "test_name": "Background Noise (10%)",
+      "accuracy": 1.0,
+      "avg_confidence": 0.985090708732605,
+      "dialect_flips": 0,
+      "samples_tested": 10,
+      "flip_rate": 0.0
+    },
+    {
+      "test_name": "Pitch Shift +5%",
+      "accuracy": 1.0,
+      "avg_confidence": 0.959306824207306,
+      "dialect_flips": 0,
+      "samples_tested": 10,
+      "flip_rate": 0.0
+    },
+    {
+      "test_name": "Pitch Shift -5%",
+      "accuracy": 1.0,
+      "avg_confidence": 0.9726811110973358,
+      "dialect_flips": 0,
+      "samples_tested": 10,
+      "flip_rate": 0.0
+    },
+    {
+      "test_name": "Tempo Shift +5%",
+      "accuracy": 1.0,
+      "avg_confidence": 0.9752246803707547,
+      "dialect_flips": 0,
+      "samples_tested": 9,
+      "flip_rate": 0.0
+    },
+    {
+      "test_name": "Tempo Shift -5%",
+      "accuracy": 1.0,
+      "avg_confidence": 0.9734033015039232,
+      "dialect_flips": 0,
+      "samples_tested": 9,
+      "flip_rate": 0.0
+    }
+  ],
+  "speaker_leakage_detected": false,
+  "speaker_overlap_count": 0,
+  "test_passed": true,
+  "failure_reasons": [],
+  "predictions": [
+    {
+      "file": "andhra_000.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9890657663345337,
+      "correct": true
+    },
+    {
+      "file": "andhra_001.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9796677827835083,
+      "correct": true
+    },
+    {
+      "file": "andhra_002.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9793040752410889,
+      "correct": true
+    },
+    {
+      "file": "andhra_003.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9810317158699036,
+      "correct": true
+    },
+    {
+      "file": "andhra_004.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9885697960853577,
+      "correct": true
+    },
+    {
+      "file": "andhra_005.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9857498407363892,
+      "correct": true
+    },
+    {
+      "file": "andhra_006.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.8830338716506958,
+      "correct": true
+    },
+    {
+      "file": "andhra_007.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.967312753200531,
+      "correct": true
+    },
+    {
+      "file": "andhra_008.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9731623530387878,
+      "correct": true
+    },
+    {
+      "file": "andhra_009.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.986258864402771,
+      "correct": true
+    },
+    {
+      "file": "andhra_010.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9806206822395325,
+      "correct": true
+    },
+    {
+      "file": "andhra_011.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9883678555488586,
+      "correct": true
+    },
+    {
+      "file": "andhra_012.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9874419569969177,
+      "correct": true
+    },
+    {
+      "file": "andhra_013.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9852926135063171,
+      "correct": true
+    },
+    {
+      "file": "andhra_014.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9892354607582092,
+      "correct": true
+    },
+    {
+      "file": "andhra_015.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9902672171592712,
+      "correct": true
+    },
+    {
+      "file": "andhra_016.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.984536349773407,
+      "correct": true
+    },
+    {
+      "file": "andhra_017.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9410602450370789,
+      "correct": true
+    },
+    {
+      "file": "andhra_018.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9680938720703125,
+      "correct": true
+    },
+    {
+      "file": "andhra_019.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.987138032913208,
+      "correct": true
+    },
+    {
+      "file": "andhra_020.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9778667092323303,
+      "correct": true
+    },
+    {
+      "file": "andhra_021.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9879840612411499,
+      "correct": true
+    },
+    {
+      "file": "andhra_022.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9849041700363159,
+      "correct": true
+    },
+    {
+      "file": "andhra_023.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9902331829071045,
+      "correct": true
+    },
+    {
+      "file": "andhra_024.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9906008243560791,
+      "correct": true
+    },
+    {
+      "file": "andhra_025.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9899234175682068,
+      "correct": true
+    },
+    {
+      "file": "andhra_026.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9877365231513977,
+      "correct": true
+    },
+    {
+      "file": "andhra_027.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9908438920974731,
+      "correct": true
+    },
+    {
+      "file": "andhra_028.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.8702926635742188,
+      "correct": true
+    },
+    {
+      "file": "andhra_029.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9753520488739014,
+      "correct": true
+    },
+    {
+      "file": "andhra_030.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9905650615692139,
+      "correct": true
+    },
+    {
+      "file": "andhra_031.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9894133806228638,
+      "correct": true
+    },
+    {
+      "file": "andhra_032.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9863927960395813,
+      "correct": true
+    },
+    {
+      "file": "andhra_033.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9904581308364868,
+      "correct": true
+    },
+    {
+      "file": "andhra_034.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.987628698348999,
+      "correct": true
+    },
+    {
+      "file": "andhra_035.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.924413800239563,
+      "correct": true
+    },
+    {
+      "file": "andhra_036.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9824637770652771,
+      "correct": true
+    },
+    {
+      "file": "andhra_037.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9243308305740356,
+      "correct": true
+    },
+    {
+      "file": "andhra_038.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9386950731277466,
+      "correct": true
+    },
+    {
+      "file": "andhra_039.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9895528554916382,
+      "correct": true
+    },
+    {
+      "file": "andhra_040.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9904153347015381,
+      "correct": true
+    },
+    {
+      "file": "andhra_041.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9843123555183411,
+      "correct": true
+    },
+    {
+      "file": "andhra_042.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9683337807655334,
+      "correct": true
+    },
+    {
+      "file": "andhra_043.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9911508560180664,
+      "correct": true
+    },
+    {
+      "file": "andhra_044.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9861277341842651,
+      "correct": true
+    },
+    {
+      "file": "andhra_045.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9885150790214539,
+      "correct": true
+    },
+    {
+      "file": "andhra_046.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9787665605545044,
+      "correct": true
+    },
+    {
+      "file": "andhra_047.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9893480539321899,
+      "correct": true
+    },
+    {
+      "file": "andhra_048.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.9674605131149292,
+      "correct": true
+    },
+    {
+      "file": "andhra_049.wav",
+      "speaker_id": "andhra",
+      "true_label": "andhra",
+      "predicted_label": "andhra",
+      "confidence": 0.98478102684021,
+      "correct": true
+    },
+    {
+      "file": "telangana_000.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.958733856678009,
+      "correct": true
+    },
+    {
+      "file": "telangana_001.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9698959589004517,
+      "correct": true
+    },
+    {
+      "file": "telangana_002.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9700151085853577,
+      "correct": true
+    },
+    {
+      "file": "telangana_003.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.972480297088623,
+      "correct": true
+    },
+    {
+      "file": "telangana_004.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9647276401519775,
+      "correct": true
+    },
+    {
+      "file": "telangana_005.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.882552981376648,
+      "correct": true
+    },
+    {
+      "file": "telangana_006.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9630785584449768,
+      "correct": true
+    },
+    {
+      "file": "telangana_007.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9731470346450806,
+      "correct": true
+    },
+    {
+      "file": "telangana_008.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.956156313419342,
+      "correct": true
+    },
+    {
+      "file": "telangana_009.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.971070408821106,
+      "correct": true
+    },
+    {
+      "file": "telangana_010.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9670644402503967,
+      "correct": true
+    },
+    {
+      "file": "telangana_011.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9440559148788452,
+      "correct": true
+    },
+    {
+      "file": "telangana_012.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.7705944776535034,
+      "correct": true
+    },
+    {
+      "file": "telangana_013.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9711648225784302,
+      "correct": true
+    },
+    {
+      "file": "telangana_014.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9429258704185486,
+      "correct": true
+    },
+    {
+      "file": "telangana_015.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9555523991584778,
+      "correct": true
+    },
+    {
+      "file": "telangana_016.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.967980146408081,
+      "correct": true
+    },
+    {
+      "file": "telangana_017.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9703680872917175,
+      "correct": true
+    },
+    {
+      "file": "telangana_018.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9593936204910278,
+      "correct": true
+    },
+    {
+      "file": "telangana_019.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9645468592643738,
+      "correct": true
+    },
+    {
+      "file": "telangana_020.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9608108401298523,
+      "correct": true
+    },
+    {
+      "file": "telangana_021.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9623757600784302,
+      "correct": true
+    },
+    {
+      "file": "telangana_022.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9697027802467346,
+      "correct": true
+    },
+    {
+      "file": "telangana_023.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.973656177520752,
+      "correct": true
+    },
+    {
+      "file": "telangana_024.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9695801734924316,
+      "correct": true
+    },
+    {
+      "file": "telangana_025.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9707030653953552,
+      "correct": true
+    },
+    {
+      "file": "telangana_026.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9721779823303223,
+      "correct": true
+    },
+    {
+      "file": "telangana_027.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9724211096763611,
+      "correct": true
+    },
+    {
+      "file": "telangana_028.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9737291932106018,
+      "correct": true
+    },
+    {
+      "file": "telangana_029.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9731764793395996,
+      "correct": true
+    },
+    {
+      "file": "telangana_030.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9659317135810852,
+      "correct": true
+    },
+    {
+      "file": "telangana_031.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9740091562271118,
+      "correct": true
+    },
+    {
+      "file": "telangana_032.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.971526563167572,
+      "correct": true
+    },
+    {
+      "file": "telangana_033.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9631763100624084,
+      "correct": true
+    },
+    {
+      "file": "telangana_034.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9685373902320862,
+      "correct": true
+    },
+    {
+      "file": "telangana_035.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.968746542930603,
+      "correct": true
+    },
+    {
+      "file": "telangana_036.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9723626971244812,
+      "correct": true
+    },
+    {
+      "file": "telangana_037.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9681443572044373,
+      "correct": true
+    },
+    {
+      "file": "telangana_038.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9690902233123779,
+      "correct": true
+    },
+    {
+      "file": "telangana_039.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9740816354751587,
+      "correct": true
+    },
+    {
+      "file": "telangana_040.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.967870831489563,
+      "correct": true
+    },
+    {
+      "file": "telangana_041.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9569712281227112,
+      "correct": true
+    },
+    {
+      "file": "telangana_042.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9715129137039185,
+      "correct": true
+    },
+    {
+      "file": "telangana_043.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9549753069877625,
+      "correct": true
+    },
+    {
+      "file": "telangana_044.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9658633470535278,
+      "correct": true
+    },
+    {
+      "file": "telangana_045.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9639637470245361,
+      "correct": true
+    },
+    {
+      "file": "telangana_046.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9734364151954651,
+      "correct": true
+    },
+    {
+      "file": "telangana_047.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9664537906646729,
+      "correct": true
+    },
+    {
+      "file": "telangana_048.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9323896169662476,
+      "correct": true
+    },
+    {
+      "file": "telangana_049.wav",
+      "speaker_id": "telangana",
+      "true_label": "telangana",
+      "predicted_label": "telangana",
+      "confidence": 0.9649124145507812,
+      "correct": true
+    }
+  ]
+}

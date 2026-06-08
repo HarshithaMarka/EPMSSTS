@@ -1,0 +1,90 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: epmssts-postgres
+    environment:
+      POSTGRES_DB: epmssts
+      POSTGRES_USER: epmssts
+      POSTGRES_PASSWORD: epmssts
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./epmssts/services/database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U epmssts" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - epmssts-network
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: epmssts-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - epmssts-network
+
+  # API Service
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: epmssts-api
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://epmssts:epmssts@postgres:5432/epmssts
+      REDIS_URL: redis://redis:6379
+      LOG_LEVEL: INFO
+    volumes:
+      - ./outputs:/app/outputs
+    networks:
+      - epmssts-network
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '2'
+          memory: 4G
+
+  # React Frontend Service
+  frontend:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: epmssts-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - api
+    environment:
+      VITE_API_URL: http://localhost:8000
+    networks:
+      - epmssts-network
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  epmssts-network:
+    driver: bridge

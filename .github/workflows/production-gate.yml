@@ -1,0 +1,44 @@
+name: production-gate
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install system deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg libsndfile1
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.lock.txt
+
+      - name: Run production CI gate
+        run: |
+          python ci_production_gate.py
+
+      - name: Upload gate report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-production-gate-report
+          path: |
+            CI_PRODUCTION_GATE_REPORT.json
+            STREAMING_LATENCY_REPORT.json
+            DIALECT_VALIDATION_RESULTS.json

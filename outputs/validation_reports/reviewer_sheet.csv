@@ -1,0 +1,14 @@
+filename,filepath,predicted,confidence,suggested_label,reviewer_label,notes,volume,emotion_folder,utterance_id
+test_happy.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_converted/test_happy.wav,angry,0.810387,angry,,,normal,unknown,test
+test_sad.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_converted/test_sad.wav,angry,0.885976,angry,,,normal,unknown,test
+test_tts_output.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_converted/test_tts_output.wav,angry,0.866889,angry,,,normal,unknown,test_tts_output
+test_happy_segment_01.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_segmented/test_happy_segment_01.wav,angry,0.565105,,,,normal,unknown,test_segment_01
+test_sad_segment_01.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_segmented/test_sad_segment_01.wav,angry,0.510853,,,,normal,unknown,test_segment_01
+test_sad_segment_02.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_segmented/test_sad_segment_02.wav,angry,0.746426,angry,,,normal,unknown,test_segment_02
+test_tts_output_segment_01.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/pilot_segmented/test_tts_output_segment_01.wav,angry,0.565105,,,,normal,unknown,test_tts_output_segment_01
+test_after_fix.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_after_fix.wav,neutral,0.822673,neutral,,,normal,unknown,test_after_fix
+test_happy.mp3,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_happy.mp3,angry,0.776767,angry,,,normal,unknown,test
+test_happy.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_happy.wav,neutral,0.849306,neutral,,,normal,unknown,test
+test_sad.mp3,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_sad.mp3,angry,0.863674,angry,,,normal,unknown,test
+test_tts_output.mp3,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_tts_output.mp3,angry,0.816310,angry,,,normal,unknown,test_tts_output
+test_tts_output.wav,C:/vivek/project_final_year/Epmssts/EPMSSTS/test_tts_output.wav,neutral,0.940874,neutral,,,normal,unknown,test_tts_output

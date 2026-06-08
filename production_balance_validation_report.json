@@ -1,0 +1,71 @@
+{
+  "class_distribution": {
+    "happy": {
+      "count": 70,
+      "percentage": 70.0
+    },
+    "sad": {
+      "count": 15,
+      "percentage": 15.0
+    },
+    "neutral": {
+      "count": 9,
+      "percentage": 9.0
+    },
+    "angry": {
+      "count": 6,
+      "percentage": 6.0
+    }
+  },
+  "average_confidence_per_class": {
+    "happy": {
+      "mean": 0.9052623949608605,
+      "std": 0.14411211452716882,
+      "min": 0.3994564793892601,
+      "max": 0.9999543756074275
+    },
+    "sad": {
+      "mean": 0.8010685260387405,
+      "std": 0.14312830746410013,
+      "min": 0.5013208764400325,
+      "max": 0.9759620221886981
+    },
+    "angry": {
+      "mean": 0.779126069159294,
+      "std": 0.2134016513928128,
+      "min": 0.39160394001715443,
+      "max": 0.9926910342874496
+    },
+    "neutral": {
+      "mean": 0.6749449168249455,
+      "std": 0.1631127528149034,
+      "min": 0.49915062362769735,
+      "max": 0.9451331418875244
+    }
+  },
+  "overall_confidence": {
+    "mean": 0.8613365620422161,
+    "std": 0.16782536675298262
+  },
+  "entropy": {
+    "mean": 0.3339137070160756,
+    "std": 0.32432076794890563,
+    "min": 0.000547944694645731,
+    "max": 1.2086949584105056
+  },
+  "class_collapse_detected": true,
+  "collapsed_classes": [
+    {
+      "class": "happy",
+      "percentage": 70.0,
+      "reason": "over-represented"
+    }
+  ],
+  "under_detection_of_sad": false,
+  "sad_percentage": 15.0,
+  "quality_issues": [
+    "Class collapse detected"
+  ],
+  "deployment_safe": false,
+  "total_samples": 100
+}

@@ -1,0 +1,121 @@
+{
+  "num_samples": 11,
+  "confusion_matrix": {
+    "neutral": {
+      "neutral": 0,
+      "happy": 0,
+      "sad": 0,
+      "angry": 0,
+      "fearful": 0
+    },
+    "happy": {
+      "neutral": 1,
+      "happy": 0,
+      "sad": 0,
+      "angry": 4,
+      "fearful": 0
+    },
+    "sad": {
+      "neutral": 1,
+      "happy": 0,
+      "sad": 0,
+      "angry": 4,
+      "fearful": 0
+    },
+    "angry": {
+      "neutral": 1,
+      "happy": 0,
+      "sad": 0,
+      "angry": 0,
+      "fearful": 0
+    },
+    "fearful": {
+      "neutral": 0,
+      "happy": 0,
+      "sad": 0,
+      "angry": 0,
+      "fearful": 0
+    }
+  },
+  "per_class_recall": {
+    "neutral": 0.0,
+    "happy": 0.0,
+    "sad": 0.0,
+    "angry": 0.0,
+    "fearful": 0.0
+  },
+  "sad_recall": 0.0,
+  "volume_invariance": 0.0,
+  "emotion_stability": 0.6,
+  "neutral_over_correction_rate": 0.2727272727272727,
+  "silence_misclassification_rate": 0.0,
+  "preprocessing_latency_ms": {
+    "p50": 22.84209997742437,
+    "p95": 28.21220002078917,
+    "meets_lt_50ms": true
+  },
+  "confidence_calibration_curve": {
+    "bin_centers": [
+      0.05,
+      0.15000000000000002,
+      0.25,
+      0.35000000000000003,
+      0.45,
+      0.55,
+      0.6500000000000001,
+      0.75,
+      0.8500000000000001,
+      0.95
+    ],
+    "avg_confidence": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.547256395410214,
+      0.6908871403125499,
+      0.7615967068557636,
+      0.8523358608936248,
+      0.0
+    ],
+    "empirical_accuracy": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "counts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      4,
+      1,
+      2,
+      4,
+      0
+    ]
+  },
+  "production_score": 0.26545454545454544,
+  "targets": {
+    "sad_recall_target": 0.65,
+    "volume_invariance_target": 0.75,
+    "production_score_target": 0.75,
+    "preprocessing_p95_lt_ms": 50.0
+  },
+  "target_hit": {
+    "sad_recall": false,
+    "volume_invariance": false,
+    "production_score": false,
+    "preprocessing_p95_lt_50ms": true,
+    "silence_misclassification_zero": true
+  }
+}

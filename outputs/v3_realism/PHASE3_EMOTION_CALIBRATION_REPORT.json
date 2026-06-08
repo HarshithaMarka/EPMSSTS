@@ -1,0 +1,20 @@
+{
+  "calibration_statistics": {
+    "total_samples": 200,
+    "mean_similarity": 0.8028683026391592,
+    "std_similarity": 0.11060288668173615,
+    "p10": 0.6692982283328904,
+    "p25": 0.7430230633589736,
+    "p50": 0.8162521211348314,
+    "p75": 0.8886866267567806,
+    "p90": 0.9317747355411725,
+    "adaptive_threshold": 0.6922654159574231,
+    "estimated_retry_rate": 0.135,
+    "samples_below_threshold": 27
+  },
+  "deployment_readiness": {
+    "minimum_samples_met": true,
+    "retry_rate_acceptable": true,
+    "deployment_status": "READY"
+  }
+}

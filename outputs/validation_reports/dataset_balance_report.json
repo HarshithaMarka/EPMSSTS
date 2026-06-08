@@ -1,0 +1,35 @@
+{
+  "passed": false,
+  "reviewed_count": 6,
+  "emotion_counts": {
+    "neutral": 3,
+    "angry": 3
+  },
+  "volume_counts": {
+    "normal": 6
+  },
+  "checks": {
+    "total_50_plus": false,
+    "per_emotion_10_plus": false,
+    "per_volume_3_plus": false,
+    "genuine_sad_5_plus": false,
+    "genuine_angry_5_plus": false
+  },
+  "deficits": {
+    "total_missing": 44,
+    "emotion_missing": {
+      "happy": 10,
+      "sad": 10,
+      "angry": 7,
+      "neutral": 7,
+      "excited": 10
+    },
+    "volume_missing": {
+      "whisper": 3,
+      "normal": 0,
+      "loud": 3
+    },
+    "sad_missing": 5,
+    "angry_missing": 2
+  }
+}

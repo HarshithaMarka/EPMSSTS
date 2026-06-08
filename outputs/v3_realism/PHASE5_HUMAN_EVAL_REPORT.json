@@ -1,0 +1,20 @@
+{
+  "evaluation_results": {
+    "total_evaluators": 5,
+    "samples_rated": 20,
+    "mean_mos": 3.9314805754232687,
+    "mean_emotion_accuracy": 0.8234024884605949,
+    "mean_dialect_authenticity": 0.83
+  },
+  "target_metrics": {
+    "mos_target": 3.8,
+    "emotion_accuracy_target": 0.8,
+    "deployment_ready": "True"
+  },
+  "quality_distribution": {
+    "EXCELLENT": 4,
+    "GOOD": 10,
+    "ACCEPTABLE": 5,
+    "POOR": 1
+  }
+}

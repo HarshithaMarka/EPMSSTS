@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-03-03 00:33:05.681858",
+  "pilot_type": "REAL_WORLD_USER_VALIDATION",
+  "data_source": "REAL_HUMAN_USERS",
+  "deployment_decision": {
+    "status": "PILOT EXTENSION",
+    "confidence_score": 77.51401459171602,
+    "blocking_issues": []
+  },
+  "key_metrics": {
+    "mean_mos": 4.114285714285714,
+    "emotion_accuracy": 0.8571428571428571,
+    "dialect_accuracy": 0.8,
+    "speaker_consistency": 0.8857142857142857,
+    "retry_rate": 0.13414634146341464,
+    "failure_rate": 0.0,
+    "user_daily_use_acceptance": 0.6
+  },
+  "deployment_criteria": [
+    {
+      "criterion": "Mean Opinion Score",
+      "threshold": 3.8,
+      "actual": 4.114285714285714,
+      "passes": true,
+      "margin_percent": 8.270676691729317
+    },
+    {
+      "criterion": "Emotion Accuracy",
+      "threshold": 0.8,
+      "actual": 0.8571428571428571,
+      "passes": true,
+      "margin_percent": 7.142857142857132
+    },
+    {
+      "criterion": "Dialect Accuracy",
+      "threshold": 0.8,
+      "actual": 0.8,
+      "passes": true,
+      "margin_percent": 0.0
+    },
+    {
+      "criterion": "Speaker Consistency",
+      "threshold": 0.85,
+      "actual": 0.8857142857142857,
+      "passes": true,
+      "margin_percent": 4.201680672268906
+    },
+    {
+      "criterion": "Retry Rate",
+      "threshold": 0.2,
+      "actual": 0.13414634146341464,
+      "passes": true,
+      "margin_percent": 32.926829268292686
+    },
+    {
+      "criterion": "Failure Rate",
+      "threshold": 0.0,
+      "actual": 0.0,
+      "passes": true,
+      "margin_percent": 0.0
+    }
+  ],
+  "deployment_thresholds": {
+    "mos_minimum": 3.8,
+    "emotion_accuracy_minimum": 0.8,
+    "dialect_accuracy_minimum": 0.8,
+    "speaker_consistency_minimum": 0.85,
+    "retry_rate_maximum": 0.2,
+    "failure_rate_maximum": 0.0
+  },
+  "recommendations": [
+    "Extend pilot with additional users",
+    "Target 20+ users for next phase",
+    "Focus on improving weak criteria",
+    "Improve Dialect Accuracy (currently 0.80)",
+    "Improve Speaker Consistency (currently 0.89)",
+    "Improve Failure Rate (currently 0.00)"
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "validation_timestamp": 1772472360.7817676,
+  "validation_date": "2026-03-02 22:56:00",
+  "total_duration_seconds": 5.716436200003955,
+  "summary": {
+    "prosody_score": 0.0,
+    "dialect_score": 0.0,
+    "emotion_preservation_score": 0.903,
+    "latency_p99": 0.0,
+    "gpu_peak_usage": 0.0,
+    "stability_score": -0.049,
+    "mos_improvement": 0.0,
+    "deployment_recommendation": "HOLD"
+  },
+  "phases": {
+    "phase1": {
+      "phase": "PHASE_1_PROSODY_TRANSFER",
+      "samples_tested": 0,
+      "mean_pitch_correlation": 0.0,
+      "mean_energy_correlation": 0.0,
+      "pass_rate": 0.0,
+      "passed": false,
+      "detailed_results": []
+    },
+    "phase2": {
+      "phase": "PHASE_2_DIALECT_AUTHENTICITY",
+      "samples_tested": 0,
+      "pass_rate": 0.0,
+      "passed": false,
+      "detailed_results": []
+    },
+    "phase3": {
+      "phase": "PHASE_3_EMOTION_CLOSED_LOOP",
+      "samples_tested": 7,
+      "mean_similarity": 0.9032345442479232,
+      "p95_similarity": 0.9112073569892627,
+      "retry_rate": 1.0,
+      "retry_success_rate": 1.0,
+      "passed": false,
+      "detailed_results": [
+        {
+          "sample_file": "sad_whisper_pilot_01.wav",
+          "cosine_similarity": 0.907882593615251,
+          "retry_triggered": true,
+          "retry_success": true
+        },
+        {
+          "sample_file": "sad_normal_pilot_01.wav",
+          "cosine_similarity": 0.9010364741591542,
+          "retry_triggered": true,
+          "retry_success": true
+        },
+        {
+          "sample_file": "sad_normal_pilot_02.wav",
+          "cosine_similarity": 0.9080056003792083,
+          "retry_triggered": true,
+          "retry_success": true
+        },
+        {
+          "sample_file": "angry_loud_pilot_01.wav",
+          "cosine_similarity": 0.9125795383935718,
+          "retry_triggered": true,
+          "retry_success": true
+        },
+        {
+          "sample_file": "test_happy.wav",
+          "cosine_similarity": 0.8835480819148988,
+          "retry_triggered": true,
+          "retry_success": true
+        },
+        {
+          "sample_file": "happy_normal_pilot_01.wav",
+          "cosine_similarity": 0.9061823847357324,
+          "retry_triggered": true,
+          "retry_success": true
+        },
+        {
+          "sample_file": "happy_normal_pilot_02.wav",
+          "cosine_similarity": 0.9034071365376445,
+          "retry_triggered": true,
+          "retry_success": true
+        }
+      ]
+    },
+    "phase4": {
+      "phase": "PHASE_4_GPU_STRESS_TEST",
+      "concurrency_levels_tested": [
+        50,
+        100
+      ],
+      "results": [
+        {
+          "concurrency_level": 50,
+          "p50_latency": 0.0,
+          "p95_latency": 0.0,
+          "p99_latency": 0.0,
+          "gpu_peak_usage": 0.0,
+          "oom_incidents": 0,
+          "passed": true
+        },
+        {
+          "concurrency_level": 100,
+          "p50_latency": 0.0,
+          "p95_latency": 0.0,
+          "p99_latency": 0.0,
+          "gpu_peak_usage": 0.0,
+          "oom_incidents": 0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    "phase5": {
+      "phase": "PHASE_5_LONG_SESSION_STABILITY",
+      "turns": 20,
+      "speaker_similarity": -0.04934164494808213,
+      "emotion_flip_events": 0,
+      "style_embedding_entropy": 0.06013066090890246,
+      "passed": false,
+      "result": {
+        "speaker_embedding_drift": 1.0493416449480821,
+        "emotion_flip_events": 0,
+        "style_embedding_entropy": 0.06013066090890246,
+        "passed": false
+      }
+    },
+    "phase6": {
+      "phase": "PHASE_6_AB_TEST_INFRASTRUCTURE",
+      "status": "infrastructure_ready",
+      "output_directory": "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS\\outputs\\v3_validation\\ab_test",
+      "requires_human_evaluation": true,
+      "instructions": "Generate samples with naturalizer ON/OFF, then recruit 20 evaluators for blind MOS scoring"
+    },
+    "phase7": {
+      "phase": "PHASE_7_FAILURE_INJECTION",
+      "scenarios_tested": 4,
+      "results": [
+        {
+          "failure_type": "prosody_extractor_timeout",
+          "circuit_breaker_triggered": true,
+          "fallback_activated": true,
+          "no_crash": true,
+          "sla_maintained": true,
+          "latency": 0.05158839999785414,
+          "passed": true
+        },
+        {
+          "failure_type": "style_encoder_crash",
+          "circuit_breaker_triggered": true,
+          "fallback_activated": true,
+          "no_crash": true,
+          "sla_maintained": true,
+          "latency": 3.6999990697950125e-06,
+          "passed": true
+        },
+        {
+          "failure_type": "gpu_memory_spike",
+          "circuit_breaker_triggered": true,
+          "fallback_activated": false,
+          "no_crash": true,
+          "sla_maintained": true,
+          "latency": 1.769999653333798e-05,
+          "passed": false
+        },
+        {
+          "failure_type": "translation_failure",
+          "circuit_breaker_triggered": true,
+          "fallback_activated": true,
+          "no_crash": true,
+          "sla_maintained": true,
+          "latency": 7.999988156370819e-07,
+          "passed": true
+        }
+      ],
+      "passed": false
+    }
+  },
+  "pass_summary": {
+    "phase1_prosody": false,
+    "phase2_dialect": false,
+    "phase3_emotion": false,
+    "phase4_gpu_stress": true,
+    "phase5_stability": false,
+    "phase6_ab_test": "manual_evaluation_required",
+    "phase7_failure": false
+  }
+}

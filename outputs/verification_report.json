@@ -1,0 +1,31 @@
+{
+  "tests": [
+    {
+      "name": "Health Check",
+      "passed": true
+    },
+    {
+      "name": "STT - Valid Audio",
+      "passed": true
+    },
+    {
+      "name": "STT - Silence",
+      "passed": true
+    },
+    {
+      "name": "Emotion - Valid Audio",
+      "passed": true
+    },
+    {
+      "name": "Full Pipeline - Valid",
+      "passed": false
+    },
+    {
+      "name": "Full Pipeline - Silence",
+      "passed": true
+    }
+  ],
+  "passed": 5,
+  "failed": 1,
+  "total": 6
+}

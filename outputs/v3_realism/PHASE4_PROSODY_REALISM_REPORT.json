@@ -1,0 +1,16 @@
+{
+  "total_samples": 1,
+  "valid_samples": 1,
+  "pass_rate": 1.0,
+  "pitch_correlation": {
+    "mean": 0.8128262796281702,
+    "threshold": 0.75
+  },
+  "energy_correlation": {
+    "mean": 0.7915772510292055,
+    "threshold": 0.7
+  },
+  "overall_prosody_score": {
+    "mean": 0.8022017653286879
+  }
+}

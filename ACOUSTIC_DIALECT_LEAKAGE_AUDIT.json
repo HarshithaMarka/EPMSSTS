@@ -1,0 +1,21 @@
+{
+  "result": {
+    "data_leakage_detected": true,
+    "cross_speaker_accuracy": 0.8999999761581421,
+    "cross_emotion_accuracy": 0.9750000238418579,
+    "cross_volume_accuracy": 0.925000011920929,
+    "random_embedding_accuracy": 0.550000011920929,
+    "overfitting_detected": true,
+    "production_ready": false
+  },
+  "details": {
+    "split_integrity": {
+      "path_overlap": 0,
+      "waveform_duplications": 0,
+      "mfcc_identical_across_splits": 0
+    },
+    "baseline_accuracy": 1.0,
+    "label_shuffle_accuracy": 0.75,
+    "synthetic_only_audit": true
+  }
+}

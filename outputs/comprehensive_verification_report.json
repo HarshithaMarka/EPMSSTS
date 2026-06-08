@@ -1,0 +1,150 @@
+{
+  "timestamp": 1772189612.246995,
+  "test_results": [
+    {
+      "test": "health_check",
+      "status": "pass",
+      "details": {
+        "API Responsive": true,
+        "STT Available": true,
+        "Emotion Available": true,
+        "Translation Available": true,
+        "TTS Available": true
+      }
+    }
+  ],
+  "stage_validations": {
+    "execution_order": {
+      "status": "pass",
+      "stages_executed": [
+        "stt_emotion",
+        "translation",
+        "tts"
+      ],
+      "stage_latencies_ms": {
+        "stt_emotion": 26428,
+        "translation": 3316,
+        "tts": 5
+      }
+    },
+    "stt": {
+      "status": "pass",
+      "checks": {
+        "transcript_not_empty": true,
+        "language_detected": true,
+        "valid_language": true
+      },
+      "transcript_length": 20,
+      "language": "en"
+    },
+    "emotion": {
+      "status": "pass",
+      "checks": {
+        "emotion_detected": true,
+        "valid_emotion": true,
+        "confidence_valid": true,
+        "confidence_reasonable": true
+      },
+      "emotion": "neutral",
+      "confidence": 0.833839224536283
+    }
+  },
+  "tts_validations": [
+    {
+      "language": "Telugu",
+      "status": "pass",
+      "checks": {
+        "translated_text_not_empty": true,
+        "audio_file_generated": true,
+        "audio_size_gt_0": true,
+        "audio_duration_valid": true,
+        "emotion_mapping_applied": true
+      },
+      "audio_size": 26504,
+      "emotion": "neutral"
+    },
+    {
+      "language": "Hindi",
+      "status": "pass",
+      "checks": {
+        "translated_text_not_empty": true,
+        "audio_file_generated": true,
+        "audio_size_gt_0": true,
+        "audio_duration_valid": true,
+        "emotion_mapping_applied": true
+      },
+      "audio_size": 28268,
+      "emotion": "neutral"
+    },
+    {
+      "language": "English",
+      "status": "pass",
+      "checks": {
+        "translated_text_not_empty": true,
+        "audio_file_generated": true,
+        "audio_size_gt_0": true,
+        "audio_duration_valid": true,
+        "emotion_mapping_applied": true
+      },
+      "audio_size": 26504,
+      "emotion": "neutral"
+    }
+  ],
+  "e2e_tests": [
+    {
+      "scenario": "Normal Speech",
+      "status": "pass",
+      "http_status": 200,
+      "latency_ms": 33660.802125930786,
+      "has_output": true
+    },
+    {
+      "scenario": "Long Audio",
+      "status": "pass",
+      "http_status": 200,
+      "latency_ms": 34064.76974487305,
+      "has_output": true
+    },
+    {
+      "scenario": "Silent Audio",
+      "status": "pass",
+      "http_status": 400,
+      "latency_ms": 28.244733810424805,
+      "expected_rejection": true
+    },
+    {
+      "scenario": "Noisy Audio",
+      "status": "pass",
+      "http_status": 200,
+      "latency_ms": 37030.622243881226,
+      "has_output": true
+    }
+  ],
+  "frontend_integration": {
+    "status": "pass",
+    "all_fields_present": true,
+    "audio_accessible": true,
+    "audio_size": 26504,
+    "fields": {
+      "session_id": true,
+      "transcript": true,
+      "translated_text": true,
+      "detected_emotion": true,
+      "detected_language": true,
+      "detected_dialect": true,
+      "output_audio_url": true,
+      "meta": true
+    }
+  },
+  "summary": {
+    "total_tests": 1,
+    "passed": 1,
+    "failed": 0,
+    "partial": 0,
+    "tts_tests_passed": 3,
+    "tts_tests_total": 3,
+    "e2e_tests_passed": 4,
+    "e2e_tests_total": 4,
+    "overall_status": "PASS"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-03-03 00:33:05.574002",
+  "recruitment_status": {
+    "target_users": 10,
+    "registered_users": 10,
+    "completed_users": 10,
+    "completion_rate": 1.0
+  },
+  "diversity_validation": {
+    "sufficient_users": true,
+    "total_users": 10,
+    "mic_quality_types": 4,
+    "speaking_style_types": 5,
+    "emotional_expressiveness_types": 3,
+    "diversity_score": 1.3333333333333333,
+    "sufficient_diversity": true
+  },
+  "user_profiles": [
+    {
+      "user_id": "user_001",
+      "mic_quality": "professional",
+      "speaking_style": "clear",
+      "emotional_expressiveness": "high",
+      "dialect_background": "neutral",
+      "interactions_completed": 5,
+      "emotions_covered": [
+        "excited",
+        "angry",
+        "sad",
+        "calm"
+      ],
+      "dialect_samples": 1,
+      "requirements_met": true
+    },
+    {
+      "user_id": "user_002",
+      "mic_quality": "consumer",
+      "speaking_style": "fast",
+      "emotional_expressiveness": "medium",
+      "dialect_background": "andhra",
+      "interactions_completed": 8,
+      "emotions_covered": [
+        "angry",
+        "excited",
+        "calm",
+        "neutral",
+        "happy"
+      ],
+      "dialect_samples": 1,
+      "requirements_met": true
+    },
+    {
+      "user_id": "user_003",
+      "mic_quality": "mobile",
+      "speaking_style": "soft",
+      "emotional_expressiveness": "low",
+      "dialect_background": "telangana",
+      "interactions_completed": 5,
+      "emotions_covered": [
+        "neutral",
+        "excited",
+        "happy",
+        "angry"
+      ],
+      "dialect_samples": 1,
+      "requirements_met": true
+    },
+    {
+      "user_id": "user_004",
+      "mic_quality": "budget",
+      "speaking_style": "expressive",
+      "emotional_expressiveness": "high",
+      "dialect_background": "mixed",
+      "interactions_completed": 8,
+      "emotions_covered": [
+        "calm",
+        "happy",
+        "neutral",
+        "angry",
+        "sad"
+      ],
+      "dialect_samples": 1,
+      "requirements_met": true
+    },
+    {
+      "user_id": "user_005",
+      "mic_quality": "consumer",
+      "speaking_style": "monotone",
+      "emotional_expressiveness": "medium",
+      "dialect_background": "andhra",
+      "interactions_completed": 6,
+      "emotions_covered": [
+        "excited",
+        "neutral",
+        "angry",
+        "calm"
+      ],
+      "dialect_samples": 1,
+      "requirements_met": true
+    },
+    {
+      "user_id": "user_006",
+      "mic_quality": "professional",
+      "speaking_style": "clear",
+      "emotional_expressiveness": "high",
+      "dialect_background": "neutral",
+      "interactions_completed": 6,
+      "emotions_covered": [
+        "happy",
+        "neutral",
+        "angry",
+        "excited",
+        "sad"
+      ],
+      "dialect_samples": 1,
+      "requirements_met": true
+    },
+    {
+      "user_id": "user_007",
+      "mic_quality": "mobile",
+      "speaking_style": "fast",
+      "emotional_expressiveness": "medium",
+      "dialect_background": "telangana",
+      "interactions_completed": 7,
+      "emotions_covered": [
+        "happy",
+        "sad",
+        "calm",
+        "neutral"
+      ],
+      "dialect_samples": 1,
+      "requirements_met": true
+    },
+    {
+      "user_id": "user_008",
+      "mic_quality": "budget",
+      "speaking_style": "soft",
+      "emotional_expressiveness": "low",
+      "dialect_background": "mixed",
+      "interactions_completed": 6,
+      "emotions_covered": [
+        "sad",
+        "happy",
+        "angry",
+        "neutral"
+      ],
+      "dialect_samples": 1,
+      "requirements_met": true
+    },
+    {
+      "user_id": "user_009",
+      "mic_quality": "consumer",
+      "speaking_style": "expressive",
+      "emotional_expressiveness": "high",
+      "dialect_background": "andhra",
+      "interactions_completed": 7,
+      "emotions_covered": [
+        "excited",
+        "happy",
+        "neutral",
+        "calm"
+      ],
+      "dialect_samples": 1,
+      "requirements_met": true
+    },
+    {
+      "user_id": "user_010",
+      "mic_quality": "professional",
+      "speaking_style": "monotone",
+      "emotional_expressiveness": "medium",
+      "dialect_background": "neutral",
+      "interactions_completed": 5,
+      "emotions_covered": [
+        "angry",
+        "happy",
+        "neutral"
+      ],
+      "dialect_samples": 1,
+      "requirements_met": true
+    }
+  ],
+  "participation_requirements": {
+    "min_interactions": 5,
+    "min_emotions": 3,
+    "dialect_sample": "required_if_applicable"
+  },
+  "pilot_readiness": {
+    "ready_for_analysis": true,
+    "blocking_issues": []
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "tests_passed": 2,
+  "tests_failed": 3,
+  "test_cases": [
+    {
+      "name": "Volume Invariance",
+      "passed": true,
+      "sad_count": 0,
+      "unique_predictions": 2
+    },
+    {
+      "name": "Emotion Discrimination",
+      "passed": false,
+      "unique_emotions": 1,
+      "distribution": {
+        "neutral": 4
+      }
+    },
+    {
+      "name": "Prediction Distribution",
+      "passed": "False",
+      "distribution": {
+        "neutral": "55.0%",
+        "angry": "15.0%",
+        "happy": "25.0%",
+        "sad": "5.0%",
+        "fearful": "0.0%"
+      },
+      "max_emotion_percentage": 55.00000000000001,
+      "entropy": 0.4405682485053927
+    },
+    {
+      "name": "Sad Prediction Rate",
+      "passed": false,
+      "sad_percentage": 0.0,
+      "sad_count": 0,
+      "total_tests": 14
+    },
+    {
+      "name": "Model Configuration",
+      "passed": true,
+      "in_eval_mode": true,
+      "old_method_removed": true,
+      "new_method_added": true
+    }
+  ],
+  "summary": {
+    "all_tests_passed": false,
+    "deployment_safe": false,
+    "timestamp": "C:\\vivek\\project_final_year\\Epmssts\\EPMSSTS"
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTS Proxy Test</title>
+    <style>
+        body { font-family: monospace; padding: 20px; }
+        pre { background: #f0f0f0; padding: 10px; overflow-x: auto; }
+        .success { color: green; }
+        .error { color: red; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>TTS Proxy Test</h1>
+    <button onclick="testDirectBackend()">Test Direct Backend</button>
+    <button onclick="testViteProxy()">Test Vite Proxy</button>
+    <hr/>
+    <h2>Results:</h2>
+    <pre id="output"></pre>
+
+    <script>
+        const API_DIRECT = "http://localhost:8000";
+        const API_PROXY = "/api";
+
+        function log(msg, isError = false) {
+            const output = document.getElementById('output');
+            const className = isError ? 'error' : 'success';
+            output.innerHTML += `<span class="${className}">${msg}</span>\n`;
+            console.log(msg);
+        }
+
+        async function testTtsEndpoint(baseUrl, label) {
+            log(`\n=== ${label} ===`);
+            log(`Base URL: ${baseUrl}`);
+            
+            const payload = {
+                text: "Hello world this is a test",
+                language: "en",
+                emotion: "neutral"
+            };
+
+            try {
+                log(`Making fetch request...`);
+                const response = await fetch(`${baseUrl}/tts/synthesize`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload),
+                    // Add timeout simulation
+                    signal: AbortSignal.timeout(30000)
+                });
+
+                log(`Response Status: ${response.status} ${response.statusText}`);
+                log(`Content-Type: ${response.headers.get('content-type')}`);
+                log(`Content-Length: ${response.headers.get('content-length')}`);
+
+                const blob = await response.blob();
+                log(`Blob Size: ${blob.size} bytes`);
+
+                if (blob.size === 46) {
+                    log(`⚠️ Got 46-byte response (the reported issue!)`, true);
+                } else if (blob.size > 1000) {
+                    log(`✓ Valid audio blob received (${blob.size} bytes)`);
+                } else {
+                    log(`⚠️ Unexpected blob size: ${blob.size}`, true);
+                }
+
+                // Try to read first bytes
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const arr = new Uint8Array(e.target.result);
+                    const hex = Array.from(arr.slice(0, 12)).map(b => b.toString(16).padStart(2, '0')).join(' ');
+                    log(`First 12 bytes: ${hex}`);
+                };
+                reader.readAsArrayBuffer(blob.slice(0, 12));
+
+                // Try to play
+                const url = URL.createObjectURL(blob);
+                log(`Blob URL created: ${url.substring(0, 50)}...`);
+                
+                // Create audio element
+                const audio = new Audio(url);
+                audio.oncanplay = () => log(`✓ Audio can play`);
+                audio.onerror = (e) => log(`✗ Audio error: ${e}`, true);
+                
+            } catch (error) {
+                log(`Error: ${error.message}`, true);
+            }
+        }
+
+        async function testDirectBackend() {
+            document.getElementById('output').innerHTML = '';
+            await testTtsEndpoint(API_DIRECT, "Direct Backend");
+        }
+
+        async function testViteProxy() {
+            document.getElementById('output').innerHTML = '';
+            await testTtsEndpoint(API_PROXY, "Vite Proxy");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "total_files_scanned": 13,
+  "files_auto_assigned": 0,
+  "files_requiring_review": 0,
+  "files_skipped_duplicate": 13,
+  "files_routed_due_to_emotion_cap": 0,
+  "files_routed_due_to_skew_guard": 0,
+  "emotion_distribution": {},
+  "volume_distribution": {},
+  "confidence_histogram": {
+    "0.00-0.20": 0,
+    "0.20-0.40": 0,
+    "0.40-0.60": 3,
+    "0.60-0.80": 2,
+    "0.80-1.00": 8
+  },
+  "min_confidence": 0.65,
+  "max_per_emotion": 15,
+  "max_skew_gap": 5,
+  "dry_run": false
+}
