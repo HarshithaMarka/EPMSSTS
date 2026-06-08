@@ -30,7 +30,7 @@ echo.
 REM Start Backend
 echo [START] Starting Backend (FastAPI) on port 8000...
 echo Opening new terminal window...
-start "EPMSSTS Backend" cmd /k "cd /d %cd% && venv\Scripts\activate.bat && uvicorn epmssts.api.main:app --reload --port 8000"
+start "EPMSSTS Backend" cmd /k "cd /d %cd% && %USERPROFILE%\Miniconda3\Scripts\activate.bat && uvicorn epmssts.api.main:app --reload --port 8000"
 echo.
 
 REM Wait for backend to start

@@ -215,3 +215,32 @@ models/
 .cache/
 
 web/node_modules/
+*.exe
+
+# Custom overrides for EPMSSTS
+*.log
+*logs.txt
+debug_output.txt
+validation_output*.txt
+e2e_results.txt
+tts_test_output.txt
+validation_results.txt
+
+# Media and large files
+*.wav
+*.mp3
+*.flac
+*.pdf
+
+# Python virtual environments
+venv/
+venv_py310/
+venv_py312/
+
+# Secrets
+.env
+.env.production
+.env.local
+
+# Temp scripts
+test_lifespan.py

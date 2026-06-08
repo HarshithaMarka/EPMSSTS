@@ -69,7 +69,7 @@ class SpeechToTextService:
     
     def __init__(
         self,
-        model_size: str = "medium",
+        model_size: str = "base",
         device_prefer_gpu: bool = True,
         max_concurrent_inferences: int = 4,
         queue_timeout_seconds: float = 30.0,
