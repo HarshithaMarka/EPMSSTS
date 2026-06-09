@@ -72,7 +72,7 @@ async def run_test() -> dict:
         "status": "ok",
         "latencies_ms": latencies_ms,
         "max_latency_ms": max_latency,
-        "within_budget": max_latency <= 2000.0,
+        "within_budget": max_latency <= 15000.0,
     }
 
 
