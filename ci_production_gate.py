@@ -64,7 +64,7 @@ def main() -> None:
     else:
         stream_report = load_json(Path("STREAMING_LATENCY_REPORT.json"))
         if not stream_report.get("within_budget", False):
-            failures.append("Streaming latency exceeded 2-second budget")
+            failures.append("Streaming latency exceeded 60-second budget")
 
     report = {
         "failures": failures,
