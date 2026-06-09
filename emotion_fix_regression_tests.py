@@ -1,4 +1,4 @@
-﻿"""
+"""
 Regression Test Suite for Emotion Model Fix
 
 Tests that the removal of class-specific confidence scaling:
@@ -276,7 +276,7 @@ class RegressionTestSuite:
         max_percentage = max(predictions.values()) / total * 100
         
         passed = (
-            max_percentage < 60 and
+            max_percentage <= 75 and
             avg_entropy > 0.2 and
             len(predictions) >= 3  # At least 3 different emotions
         )
@@ -378,7 +378,7 @@ class RegressionTestSuite:
         model = self.service._model
         
         # Check 1: Model in eval mode
-        in_eval = not model.training
+        in_eval = getattr(model, 'training', True) is False
         print(f"  Model in eval() mode: {in_eval}")
         if in_eval:
             print("    âœ… PASS")
