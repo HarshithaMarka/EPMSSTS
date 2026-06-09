@@ -434,10 +434,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Coqui TTS for speech synthesis
 - FastAPI for the excellent web framework
 
-## 📧 Contact
 
-For questions or support, please open an issue on GitHub.
-
----
-
-**Built with ❤️ for multilingual communication**
